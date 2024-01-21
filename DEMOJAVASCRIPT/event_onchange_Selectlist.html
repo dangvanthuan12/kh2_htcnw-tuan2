@@ -1,0 +1,23 @@
+﻿<html>
+<head>
+<script>
+function preferedBrowser() {
+    prefer = dk.browsers.value;
+    alert("You prefer browsing internet with " + prefer);
+}
+</script>
+</head>
+
+<body>
+
+<form id="dk">
+Choose which browser you prefer:
+<select id="browsers" onchange="preferedBrowser()">
+<option value="Chrome AAA">Chrome</option>
+<option value="Internet Explorer BBB">Internet Explorer</option>
+<option value="Firefox CCC">Firefox</option>
+</select>
+</form>
+
+</body>
+</html>

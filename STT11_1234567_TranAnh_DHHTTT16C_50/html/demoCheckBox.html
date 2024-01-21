@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery-3.6.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function() {
+
+            $('input[type="checkbox"]').change(function() {
+
+                var $this = $(this);
+                // console.log("this", $this.val() );
+
+                if ($this.val() == "all") {
+                    var $name = $this.attr("name");
+                    if ($this.is(":checked")) {
+
+                        $('input[name="' + $name + '"]').each(function(i) {
+                            if (i > 0) {
+                                $(this).prop('checked', true);
+                            }
+                        })
+                    } else {
+
+                        $('input[name="' + $name + '"]').each(function(i) {
+                            if (i > 0) {
+                                $(this).prop('checked', false);
+                            }
+                        })
+                    }
+                } else {
+                    // click no choose
+                    var $name = $this.attr("name");
+                    if ($this.is(":checked") == false) {
+
+                        $('input[name="' + $name + '"]').each(function(i) {
+                            if ($(this).val() == "all") {
+
+                                $(this).prop('checked', false);
+                            }
+                        })
+                    }
+                    // click choose
+                    else {
+                        var $i = 0;
+                        var $checked = 0;
+                        $('input[name="' + $name + '"]').each(function(i) {
+                            $i++;
+
+                            if ($(this).val() != "all") {
+                                if ($(this).is(":checked")) {
+                                    $checked++;
+                                }
+                            }
+                        })
+
+                        // console.log("i", $i )
+                        // console.log("checked", $checked )
+
+                        if ($checked == $i - 1) {
+                            $('input[name="' + $name + '"][value="all"]').prop('checked', true);
+                        }
+
+                    }
+                }
+            });
+        })
+    </script>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Roboto';
+            font-size: 16px;
+        }
+        
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        .col-title {
+            flex-basis: 20%;
+        }
+        
+        .col-title p {
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        
+        .col-action {
+            flex: 1;
+        }
+        
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+        }
+        
+        ul li {
+            width: 20%;
+        }
+        
+        ul li label:hover {
+            cursor: pointer;
+        }
+        
+        ul li label input {
+            display: none;
+        }
+        
+        ul li label input:checked+span::before {
+            border: solid 1px #037EC8;
+        }
+        
+        ul li label span::before {
+            content: '';
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            border: solid 1px #c2c2c2;
+            background: #FFF;
+            border-radius: 4px;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+        
+        fieldset {
+            border: none;
+            padding: 0;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Dùng Jquery bắt sự kiện cho Checkbox</h1>
+        <form action="">
+            <fieldset>
+
+                <div class="row">
+                    <div class="col-title">
+                        <p class="title">Interest</p>
+                    </div>
+                    <div class="col-action">
+                        <ul>
+                            <li>
+                                <label>
+                      <input type="checkbox" value="all" name="interest[]">
+                      <span>All</span>
+                    </label>
+                            </li>
+                            <li>
+                                <label>
+                      <input type="checkbox" value="music" name="interest[]">
+                      <span>Music</span>
+                    </label>
+                            </li>
+                            <li>
+                                <label>
+                      <input type="checkbox" value="coffee" name="interest[]">
+                      <span>Coffee</span>
+                    </label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-title">
+                        <p class="title">Language</p>
+                    </div>
+                    <div class="col-action">
+                        <ul>
+                            <li>
+                                <label>
+                      <input type="checkbox" value="all" name="language[]">
+                      <span>All</span>
+                    </label>
+                            </li>
+                            <li>
+                                <label>
+                      <input type="checkbox" value="vietnamese" name="language[]">
+                      <span>Vietnamese</span>
+                    </label>
+                            </li>
+                            <li>
+                                <label>
+                      <input type="checkbox" value="engish" name="language[]">
+                      <span>English</span>
+                    </label>
+                            </li>
+                            <li>
+                                <label>
+                      <input type="checkbox" value="japanese" name="language[]">
+                      <span>Japanese</span>
+                    </label>
+                            </li>
+                            <li>
+                                <label>
+                      <input type="checkbox" value="korean" name="language[]">
+                      <span>Korean</span>
+                    </label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-title">
+                        <p class="title">Cars</p>
+                    </div>
+                    <div class="col-action">
+                        <ul>
+                            <li>
+                                <label>
+                      <input type="checkbox" value="all" name="national[]">
+                      <span>All</span>
+                    </label>
+                            </li>
+                            <li>
+                                <label>
+                      <input type="checkbox" value="honda" name="national[]">
+                      <span>Honda</span>
+                    </label>
+                            </li>
+                            <li>
+                                <label>
+                      <input type="checkbox" value="mercedes" name="national[]">
+                      <span>Mercedes</span>
+                    </label>
+                            </li>
+                            <li>
+                                <label>
+                      <input type="checkbox" value="audi" name="national[]">
+                      <span>Audi</span>
+                    </label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+
+    </div>
+</body>
+
+</html>

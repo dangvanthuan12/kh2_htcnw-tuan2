@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery-3.6.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <style>
+
+    </style>
+    <script>
+        $(document).ready(function() {
+            $("#btnModal").click(function() {
+                $("#myModal").modal();
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <input type="button" value="Hien" id="btnModal">
+        <div class="row">
+            <div class="modal fade" id="myModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3>MODAL TITLE</h3>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="row">
+                                    <div class="col-4 col-xl-4">
+                                        <label for="">Ma sinh vien:</label>
+
+                                    </div>
+                                    <div class="col-8 col-xl-8">
+                                        <input type="text" class="form-control" placeholder=".col-4 .col-sm-8">
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-4 col-xl-4">
+                                        <label for="">Ho ten:</label>
+
+                                    </div>
+                                    <div class="col-8 col-xl-8">
+                                        <input type="text" class="form-control" placeholder=".col-4 .col-sm-8">
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-4 col-xl-4">
+                                        <label for="">Que quan:</label>
+
+                                    </div>
+                                    <div class="col-8 col-xl-8">
+                                        <input type="text" class="form-control" placeholder=".col-4 .col-sm-8">
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-5 col-xl-5">
+                                    </div>
+                                    <div class="col-5 col-xl-5">
+                                        <input type="submit" value="Submit">&nbsp;
+                                        <input type="reset" value="reset">
+                                    </div>
+                                    <div class="col-2 col-xl-2">
+                                    </div>
+                                </div>
+                                <br>
+
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+</body>
+
+</html>

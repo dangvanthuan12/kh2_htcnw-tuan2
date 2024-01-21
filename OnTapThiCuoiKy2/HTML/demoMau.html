@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/bootstrap.min.css">
+    <!--1-->
+    <script src="../JS/jquery.min.js"></script>
+    <script src="../JS/bootstrap.min.js"></script>
+    <style>
+        [class*="col-"] {
+            padding: 0px;
+            margin: 0px auto;
+        }
+        
+        .p1 {
+            position: absolute;
+            top: 80px;
+            left: 300px;
+            font-stretch: expanded;
+            font-size: xx-large;
+            color: white;
+        }
+        
+        ul li {
+            width: 120px;
+        }
+    </style>
+    <script>
+        $(document).ready(function() {
+            $("#myBtn").click(function() {
+                $("#myModal").modal();
+            })
+        });
+    </script>
+</head>
+
+<body>
+    <div class="container bg-info">
+        <div class="row">
+            <div class="col-md-12">
+                <img src="../Images/Banner.png" alt="" sizes="" srcset="" width="100%">
+            </div>
+            <p class="p1">TRƯỜNG ĐẠI HỌC CÔNG NGHIỆP THÀNH PHỐ HỒ CHÍ MINH</p>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+                <nav class="navbar-collapse">
+                    <ul class="navbar-nav nav" style="background-color: #99FFCC;">
+                        <li><a href="#">HOME</a></li>
+                        <li><a href="#">SHOP</a></li>
+                        <li><a href="#">BLOG</a></li>
+                        <li><a href="#">ARTICLE</a></li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">SERVICES<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#" id="myBtn">Online</a></li>
+                                <li><a href="#" id="myBtn2">Offline</a></li>
+
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+
+            </div>
+        </div>
+        <div class="row bg-success">
+            <div class="col-md-12">
+                <table class="table-active table-borderless top-header table table-bordered table-hover">
+                    <tr>
+                        <th>STT</th>
+                        <th>HO TEN</th>
+                        <th>QUE QUÁN</th>
+                        <th>LỚP</th>
+                        <th>GHI CHÚ</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Trần Anh</td>
+                        <td>Cần Thơ</td>
+                        <td>DH17</td>
+                        <td>Sinh mới</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="modal fade" role="dialog" id="myModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h2 class="text-danger">Customer infomation</h2>
+
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <form action="" method="get" class="form-control">
+                                <div class="col-md-4">
+                                    <label for="">Ma Sinh viên:</label>
+                                </div>
+                                <div class="col-md-8">
+                                    <input type="text" id="maSV">
+                                </div><br><br>
+                                <div class="col-md-4">
+                                    <label for="">Họ tên:</label>
+                                </div>
+                                <div class="col-md-8">
+                                    <input type="text" id="txtHT">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="row">
+                            <button type="submit" class="btn-dark btn-primary">Đăng ký</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

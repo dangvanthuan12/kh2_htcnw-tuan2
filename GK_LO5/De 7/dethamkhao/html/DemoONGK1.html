@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0 auto;
+            box-sizing: border-box;
+        }
+        
+        .wrapper {
+            width: 960px;
+            border: 1px solid rgb(6, 6, 14);
+            color: gray;
+        }
+        
+        header {
+            height: 100px;
+            background-color: #294e79;
+            position: relative;
+            color: white;
+        }
+        
+        .wrapper header img {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+        
+        .wrapper header form {
+            position: absolute;
+            top: 10px;
+            left: 700px;
+        }
+        
+        .wrapper header h1 {
+            position: absolute;
+            top: 20px;
+            left: 80px;
+        }
+        
+        .wrapper header p {
+            position: absolute;
+            top: 70px;
+            left: 80px;
+        }
+        
+        .wrapper header .menu-parent {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            display: flex;
+            list-style: none;
+        }
+        
+        .wrapper header .menu-parent li a {
+            color: white;
+            padding: 10px 20px;
+            display: block;
+            text-decoration: none;
+            background-color: #3d73b1;
+            margin-left: 10px;
+        }
+        
+        .wrapper header .menu-parent li .menu-child {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <img src="../img/logo.jpg" alt="">
+            <h1>FlowerBox 360</h1>
+            <p>...to get your daily dose of luxury roses!</p>
+            <form action="" method="post">
+                <input type="text" name="txtSch" id="txtSch">
+                <input type="button" value="GO">
+            </form>
+            <ul class="menu-parent">
+                <li><a href="">Home</a></li>
+                <li><a href="">Promotion</a></li>
+                <li><a href="">Gift Baskets</a></li>
+                <li><a href="">Flower Services</a>
+                    <ul class="menu-child">
+                        <li><a href="">Flower for Wedding</a></li>
+                        <li><a href="">Flower for Conference</a></li>
+                    </ul>
+                </li>
+                <li><a href="">About</a></li>
+            </ul>
+        </header>
+        <content></content>
+        <foot></foot>
+    </div>
+</body>
+
+</html>

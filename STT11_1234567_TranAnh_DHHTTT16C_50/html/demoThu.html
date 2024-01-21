@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery-3.6.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script>
+        // checked/unchecked all (jquery)
+        function checkAllJquery(baseId, itemClass) {
+            var baseCheck = $('#' + baseId).is(":checked");
+            $('.' + itemClass).each(function() {
+                if (!$(this).is(':disabled')) {
+                    $(this).prop('checked', baseCheck);
+                }
+            });
+        }
+    </script>
+</head>
+
+<body>
+    Group1: All
+    <input type="checkbox" id="group1" name="group1" onclick="checkAllJquery('group1', 'item1');" /> Item1
+    <input type="checkbox" class="item1" name="item11" /> Item2
+    <input type="checkbox" class="item1" name="item12" /> Item3
+    <input type="checkbox" class="item1" name="item13" disabled="true" /> Item4
+    <input type="checkbox" class="item1" name="item14" disabled="true" />
+    <br> Group2: All
+    <input type="checkbox" id="group2" name="group2" onclick="checkAllJquery('group2', 'item2');" /> Item1
+    <input type="checkbox" class="item2" name="item21" /> Item2
+    <input type="checkbox" class="item2" name="item22" /> Item3
+    <input type="checkbox" class="item2" name="item23" /> Item4
+    <input type="checkbox" class="item2" name="item24" />
+    <br> Group3: All
+    <input type="checkbox" id="group3" name="group3" onclick="checkAllJquery('group3', 'item3');" /> Item1
+    <input type="checkbox" class="item3" name="item31" /> Item2
+    <input type="checkbox" class="item3" name="item32" /> Item3
+    <input type="checkbox" class="item3" name="item33" /> Item4
+    <input type="checkbox" class="item3" name="item34" />
+    <br>
+</body>
+
+</html>

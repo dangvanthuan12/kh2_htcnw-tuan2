@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Dang Ky</title>
+    <link rel="stylesheet" type="text/css" href="../CSS/bootstrap.css">
+	 <script src="../JS/jquery-2.1.4.js"></script>
+    <script src="../JS/bootstrap.js"></script>
+   
+    <script src="../JS/CK.js"></script>
+    <script src="../JS/jquery.validate.js"></script>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header class="page-header">
+            <nav class="navbar navbar-default">
+                <div class="navbar-header col-md-4 col-sm-4">
+                    <img src="../Images/logo.PNG" />
+                </div>
+                <div class="navbar-header col-md-8 col-sm-8 text-center">
+                    <h2>BỘ CÔNG THƯƠNG TRƯỜNG ĐẠI HỌC CÔNG NGHIỆP THÀNH PHỐ HỒ CHÍ MINH</h2>
+                    <h4 class="text-danger">ĐOÀN THANH NIÊN TRƯỜNG ĐẠI HỌC CÔNG NGHIỆP THÀNH PHỐ HỒ CHÍ MINH</h4>
+                </div>
+            </nav>
+            <nav class="navbar bg-info">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="TrangChu.html">TRANG CHỦ</a></li>
+                    <li><a href="#">TỔ CHỨC</a></li>
+                    <li><a href="#">HÌNH ẢNH</a></li>
+                    <li><a href="DangKy.html">HOẠT ĐỘNG</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">SERVICES<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#" id="myBtn">Online</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div class="row">
+            <section class="col-md-7 col-sm-7 modal-content">
+                <form class="form-horizontal">
+                    <h2 class="text-danger text-center bg-success">Tham gia mùa hè xanh</h2>
+                    <div class="form-group">
+                        <label for="txtMa" class="col-sm-3 col-form-label text-center">MSSV*:</label>
+                        <div class="col-sm-3">
+                            <input type="text" id="txtMa" class="form-control">
+                        </div>
+                        <span id="re-txtMa" class="text-danger col-sm-offset-3 col-sm-7"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="txtTen" class="col-sm-3 col-form-label text-center">Tên SV*:</label>
+                        <div class="col-sm-7">
+                            <input type="text" id="txtTen" class="form-control">
+                        </div>
+                        <span id="re-txtTen" class="text-danger col-sm-offset-3 col-sm-7"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="txtEmail" class="col-sm-3 col-form-label text-center">Email*:</label>
+                        <div class="col-sm-5">
+                            <input type="text" id="txtEmail" class="form-control">
+                        </div>
+                        <span id="re-txtEmail" class="text-danger col-sm-offset-3 col-sm-7"></span>
+                    </div>
+                    <div class="form-group text-center">
+                        <button type="button" class="btn btn-success" id="btnSave">Đăng ký</button>
+                        <button type="button" class="btn btn-warning">Nhập lại</button>
+                    </div>
+                </form>
+            </section>
+            <aside class="col-md-5 col-sm-5">
+                <table class="table table-striped">
+                    <h3 class="text-center text-warning">Kết quả đăng ký</h3>
+                    <thead>
+                        <tr>
+                            <th>STT</th>
+                            <th>Mã SV</th>
+                            <th>Tên SV</th>
+                            <th>Email</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </aside>
+        </div>
+        <footer class="modal-footer bg-primary">@ 2020 Đoàn thanh niên - Trường đại học Công Nghiệp TP. Hồ Chí Minh</footer>
+    </div>
+</body>
+</html>

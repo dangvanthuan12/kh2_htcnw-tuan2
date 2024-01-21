@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<script language="javascript" type="text/javascript">
+var a= eval(prompt("Nhập cạnh a:"));
+var b= eval(prompt("Nhập cạnh b:"));
+var c= eval(prompt("Nhập cạnh c:"));
+if(a<b+c && b<a+c && c<a+b){
+	if (a==b && b==c && a==c){
+		document.writeln(" tam giac ABC đều");
+		}
+	else 
+		if( a==b || b==c || a==c){
+			document.writeln("tam giac ABC cân");
+			}
+		else {
+			alert("Tam giác ABC thường");}
+}
+	else {
+		alert("Không phải là tam giác");}
+
+</script>
+</head>
+
+<body>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+
+</head>
+<body>
+<p>Nhap nam can kiem tra: <input type="text" id="txtname" />
+<input type="button" value="Kiem tra" onclick="kiemTraNamNhuan()"/>
+</p>
+<script language="javascript">
+function kiemTraNamNhuan(){
+var nam = document.getElementById("txtname").value;
+// nếu năm chia hết cho 100
+    // thì kiểm tra nó có chia hết cho 400 hay không
+    if (nam % 100 == 0)
+    { // nêu chia hết cho 400 thì là năm nhuận
+        if (nam % 400 == 0){
+            alert('Nam ' + nam + ' là năm nhuận');
+        }
+        else { // ngược lại không phải năm nhuận
+            alert('nam' + nam + ' : không phải năm nhuận');
+        }
+    }
+    else if (nam % 4 == 0){ // trường hợp chia hết cho 4 thì là năm nhuận
+        alert('Nam '+ nam + ' : là năm nhuận');
+    }
+    else { // cuối cùng trường hợp không phải năm nhuận
+        alert('nam '+ nam + ' : không phải là năm nhuận');
+    }
+}
+</script>
+</body>
+</html>

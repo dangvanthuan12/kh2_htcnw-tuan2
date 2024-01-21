@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px auto;
+        }
+        
+        .wrapper {
+            height: 300px;
+            width: 500px;
+            background-color: antiquewhite;
+        }
+        
+        #frm1 {
+            height: 250px;
+            width: 450px;
+            background-color: aqua;
+        }
+        
+        .lbl {
+            height: 200px;
+            width: 170px;
+            float: left;
+        }
+        
+        .inp {
+            height: 200px;
+            width: 210px;
+            float: left;
+        }
+        
+        span {
+            color: blue;
+        }
+    </style>
+    <script>
+        function kiemTraMaSV() {
+            var ma = document.getElementById("txtMa").value.trim();
+            mauMaSV = /^[0-9]{9}/;
+            if (mauMaSV.test(ma) == true) {
+                document.getElementById("spMa").innerHTML = "Nhap dung";
+            } else {
+                alert("Nhap sai mau");
+            }
+        }
+
+        function kiemTraTen() {
+            var ten = frm1.txtHoTen.value;
+            mauTenDN = /(^[A-Z]{1})([a-z]+)(\s[A-Z]{1}([a-z]*))*$/;
+            if (mauTenDN.test(ten) == true) {
+                alert("Da nhap dung mau");
+            } else {
+                alert("Nhap sai mau");
+            }
+        }
+
+        function kiemTraNS() {
+            var ns = new Date(frm1.dateNS.value);
+            var ngayHT = new Date();
+            if (eval(ngayHT.getFullYear()) - eval(ns.getFullYear()) >= 18) {
+                document.getElementById("spNS").innerHTML = "True";
+            } else {
+                document.getElementById("spNS").innerHTML = "False";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <form action="" method="get" id="frm1">
+            <h2>Thong tin form validation</h2>
+            <fieldset>
+                <legend>
+                    information
+                </legend>
+                <div class="lbl">
+                    <label for="">Ma Sinh vien:</label> <br><br>
+                    <label for="">Ho ten:</label><br><br>
+                    <label for="">Ngay sinh:</label><br><br>
+                    <label for="">Que quan:</label><br><br>
+                </div>
+                <div class="inp">
+                    <input type="text" name="" id="txtMa" onblur="kiemTraMaSV();"><span id="spMa">*</span><br><br>
+                    <input type="text" name="" id="txtHoTen" onblur="kiemTraTen();"><br><br>
+                    <input type="date" name="" id="dateNS" onblur="kiemTraNS();"><span id="spNS">*</span>
+                    <input type="text" name="" id="txtQueQuan"><br><br>
+                </div>
+            </fieldset>
+
+        </form>
+    </div>
+</body>
+
+</html>

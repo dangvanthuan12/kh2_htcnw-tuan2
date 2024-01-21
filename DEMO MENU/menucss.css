@@ -1,0 +1,41 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	margin: 0px;
+	padding: 0px;
+	}
+.main{
+	margin: 0px auto;/*canh le auto đưa ra trung tâm của trang*/
+	width: 600px;
+	}
+.main ul{
+	margin: 0 px;/*Le cho menu*/
+	padding: 0px;
+	width: 250px;/*Kích thước chiều ngang menu*/
+	background: #09C;/*Màu nền cho menu */
+	}
+.main ul li {
+	list-style:none; /*không cho hiện các bullet đầu đoạn */
+	position:relative; /*Dùng thuộc tinh này để giữ menu con trong li và left và top sẽ canh lề bên trong nó*/
+	}
+.main ul li a {
+	text-decoration:none;
+	color:#fff;
+	line-height: 50px;
+	border-bottom: 1px solid #666;
+	display:block;
+	text-indent:10px;
+	}
+.main ul li ul {
+	position:absolute;
+	left:250px;
+	top:0px;
+	display:block;
+	}
+.main ul li:hover > ul {
+	display:block;
+	}
+.main ul li a:hover {
+	background:#990;
+	transition-delay: 30;}

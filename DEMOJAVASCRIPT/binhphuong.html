@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<script language="javascript">
+    function binhphuong()
+	{
+	  
+	}
+   
+</script>
+
+</head>
+
+<body>
+
+<form name="myform"> 
+		 Nhập số <input type="text" name="txtso" /> <br>
+		 Kết quả <input type="text" name="txtketqua" size="25" readonly/> 
+ 		
+		
+		  <input type="button" value="Tính bình phương" 
+		  onclick=" var so = parseInt(document.getElementsByName('txtso'));
+            alert(so.toString());
+	      var kiemtra=isNaN(so);
+	 
+		  if(kiemtra==true)
+		  {
+		     alert('Giá trị nhập vào bắt buộc là số');
+			 myform.txtso.value='';
+			 myform.txtketqua.value='';
+			 myform.txtso.focus();
+		  }	 
+	      else
+		  { 
+	         var kq=so*so;
+	  
+	 		 myform.txtketqua.value=kq;
+			 
+			 
+		  }">
+	</form>
+	
+	<form name="form2">
+	
+	  <input type="text"  name="txtso1"  onblur="form2.txtso2.value=1000" onfocus="form2.txtso2.value=''"/>
+	  <input type="text" name="txtso2" />
+	</form>
+
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery-3.6.4.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <style>
+        [class*="col-"] {
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        li {
+            width: 150px;
+        }
+    </style>
+    <script>
+        $(document).ready(function() {
+            $("#myBtn").click(function() {
+                $("#myModal").modal('show');
+            })
+
+        })
+
+        function kiemTraMa() {
+            var maSV = $("#txtMa").val();
+            alert(maSV);
+        }
+    </script>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-3 col-md-3 col-xl-3">
+                <img src="../img/LOGO.jpg" alt="" srcset="" width="100%">
+            </div>
+            <div class="col-9 col-md-9 col-xl-9 bg-white text-danger">
+                <h1>TRUONG DAI HOC CONG NGHIEP THANH PHO HO CHI MINH</h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <ul class="nav bg-dark justify-content-end">
+                <li class="nav-item"><a href="#" class="nav-link" id="myBtn">MO MODAL</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">ITEM 1</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">ITEM 1</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">ITEM 1</a></li>
+            </ul>
+        </div>
+        <div class="row ">
+            <div class="modal fade col-md-6" id="myModal">
+                <div class="dialog" role="dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            Dau Trang
+                        </div>
+                        <div class="modal-body">
+                            <form action="" method="get">
+                                <input type="text" id="txtMa" onblur="kiemTraMa()">
+                                <span id="spMa">* Thông báo</span>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            chan
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

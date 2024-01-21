@@ -1,0 +1,237 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link type="text/css" rel="stylesheet" href="../CSS/bootstrap.css" />
+    <script type="text/javascript" src="../JS/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="../JS/bootstrap.js"></script>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+
+    <script>
+        function ktten() {
+            var ten = document.getElementById("txtten").value;
+            if (ten == "") {
+                document.getElementById("ten").innerHTML = "* Bat buoc nhap";
+                return false;
+            }
+            else {
+                var regt = /^[A-Za-z]+\s*[A-Za-z]{1,}$/;
+                if (regt.test(ten) == false) {
+                    document.getElementById("ten").innerHTML = "*Gia tri phai la chuoi >2";
+                    return false;
+                }
+                else {
+                    document.getElementById("ten").innerHTML = "";
+                    return true;
+                }
+            }
+        }
+
+        function kttuoi() {
+            var ngaysinh = new Date(document.getElementById("txtns").value);
+            var namsinh = ngaysinh.getFullYear();
+            var tuoits = 2019 - namsinh;
+            if ( tuoits >= 16) {
+                tuoi.innerHTML = "";
+                return true;
+            }
+            else {
+                tuoi.innerHTML = "Thi sinh phai lon hon 16 tuoi."
+                return false;
+            }
+        }
+
+        function ktbh() {
+            var baihat = document.getElementById("txtbh").value;
+            if (baihat == "") {
+                document.getElementById("bh").innerHTML = "* Bat buoc nhap";
+                return false;
+            }
+            else {
+                var regt = /^\w+\s?\w*/;
+                if (regt.test(baihat) == false) {
+                    document.getElementById("bh").innerHTML = "*Gom chuoi va so";
+                    return false;
+                }
+                else {
+                    document.getElementById("bh").innerHTML = "";
+                    return true;
+                }
+            }
+        }
+
+        function ktdc() {
+            var diachi = document.getElementById("txtdc").value;
+            if (diachi == "") {
+                document.getElementById("dc").innerHTML = "* Bat buoc nhap";
+                return false;
+            }
+            else {
+                var regt = /^\w+\s?\w*/;
+                if (regt.test(diachi) == false) {
+                    document.getElementById("dc").innerHTML = "*Gia tri phai la chuoi";
+                    return false;
+                }
+                else {
+                    document.getElementById("dc").innerHTML = "";
+                    return true;
+                }
+            }
+        }
+
+        function load() {
+            if (ktten() == true && kttuoi() == true && ktbh() == true && ktdc() == true) {
+                loaddata();
+                return true;
+            }
+            else {
+                ktten();
+                kttuoi();
+                ktbh();
+                ktdc();
+                return false;
+            }
+        }
+
+        function loaddata() {
+            var hoten = document.getElementById("txtten").value;
+            var ngaysinh = document.getElementById("txtns").value;
+            var baihat = document.getElementById("txtbh").value;
+            var diachi = document.getElementById("txtdc").value;
+            var checkbox = document.getElementsByName('theloai');
+            var result = "";
+            for (var i = 0; i < checkbox.length; i++) {
+                if (checkbox[i].checked === true) {
+                    result += checkbox[i].value ;
+                }
+            }
+            //var anh = document.getElementById("image").value;
+              
+            document.getElementById("1").innerHTML = hoten;
+            document.getElementById("2").innerHTML = ngaysinh;
+            document.getElementById("3").innerHTML = result;
+            document.getElementById("4").innerHTML = baihat;
+            document.getElementById("5").innerHTML = diachi;
+            //document.getElementById("6").innerText = anh;
+        }
+    </script>
+</head>
+<body>
+    <div class="container" style="border:1px solid #000;">
+        <div class="row">
+            <div class="col-md-12" style="height:150px; border:1px solid #000;">
+                <h1 align="center">HTV</h1>
+                <h1 align="center">DANG KI TIENG HAT TRUYEN HINH</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12" style=" padding:0px; margin:0px;">
+                <nav class="navbar navbar-inverse">
+                    <ul class="nav navbar-nav">
+                        <li> <a href="#">Trang Chủ</a></li>
+                        <li> <a href="#">Vòng Loại</a></li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Đăng Kí<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#" data-toggle="modal" data-target="#myForm">Offline</a></li>
+                                <li><a href="#">Online</a></li>
+                            </ul>
+                        </li>
+                        <li> <a href="#">Liên Hệ</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h1 align="center">THONG TIN THI SINH DANG KI</h1>
+                <table class="table table-striped" id="tbl" style="padding:0px; margin:0px;">
+                    <tr>
+                        <th>STT</th>
+                        <th>Ho ten</th>
+                        <th>Ngày Sinh</th>
+                        <th>Thể Loại Dự Thi</th>
+                        <th>Bài Hát</th>
+                        <th>Địa Chỉ</th>
+                        <th>Hình Ảnh</th>
+                    </tr>
+                    <tr>
+                        <td id="stt"></td>
+                        <td id="1"></td>
+                        <td id="2"></td>
+                        <td id="3"></td>
+                        <td id="4"></td>
+                        <td id="5"></td>
+                        <td id="6"></td>                        
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12" style="height:80px; border:1px solid #000;">
+                <h5 align="center">MSSV:Demo</h5>
+                <h5 align="center">Họ Tên: Demo</h5>
+            </div>
+        </div>
+        <div class="modal fade" role="dialog" id="myForm">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button class="close" data-dismiss="modal" type="button">&times;</button>
+                        <h1>PHIẾU ĐĂNG KÍ</h1>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label>Ho ten</label>
+                                <input type="text" class="form-control" id="txtten" onblur="ktten()" />
+                                <span id="ten" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label>Ngay sinh</label>
+                                <input type="date" class="form-control" id="txtns" onblur="kttuoi()"/>
+                                <span id="tuoi" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label>Thể Loại Dự Thi</label><br />
+                                <input type="checkbox" name="theloai" value="Dân Ca " />Dân Ca<br />
+                                <input type="checkbox" name="theloai" value="Nhạc Nhẹ " />Nhạc Nhẹ<br />
+                                <input type="checkbox" name="theloai" value="Thính Phòng " />Thính phòng<br />
+                                <span id="theloai" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label>Bài Hát</label>
+                                <input type="text" class="form-control" id="txtbh" onblur="ktbh()" />
+                                <span id="bh" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label>Địa Chỉ</label>
+                                <input type="text" class="form-control" id="txtdc" onblur="ktdc()"/>
+                                <span id="dc" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label>Hình Ảnh</label>
+                                <input type="file" class="form-control" id="image" accept="image/*" />
+                                <!--<span id="anh" class="text-danger"></span>-->
+                            </div>                           
+                            <div class="form-group">
+                                <button type="button" class="btn btn-success btn-block" onclick="load()">Luu</button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+</body>
+</html>

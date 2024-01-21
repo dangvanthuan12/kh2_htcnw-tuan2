@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <Style>
+        * {
+            margin: 0px auto;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        
+        .wrapper {
+            width: 960px;
+        }
+        
+        header {
+            height: 100px;
+            background-color: #294e79;
+            color: white;
+            position: relative;
+        }
+        
+        header img {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+        
+        header h1 {
+            position: absolute;
+            top: 20px;
+            left: 80px;
+        }
+        
+        header form {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        
+        header p {
+            position: absolute;
+            bottom: 12px;
+            left: 80px;
+        }
+        
+        .menu li {
+            position: absolute;
+            height: 45px;
+            width: 110px;
+            bottom: 5px;
+            right: 15px;
+            display: flex;
+            background-color: #455c77;
+            list-style: none;
+            text-indent: 5px;
+            line-height: 45px;
+        }
+        
+        .menu li:hover {
+            background-color: #949ca5;
+        }
+        
+        .menu li:nth-child(5) {
+            right: 15px;
+        }
+        
+        .menu li:nth-child(4) {
+            right: 135px;
+        }
+        
+        .menu li:nth-child(3) {
+            right: 255px;
+        }
+        
+        .menu li:nth-child(2) {
+            right: 375px;
+        }
+        
+        .menu li:nth-child(1) {
+            right: 495px;
+        }
+        
+        .menu li .sub_menu li:nth-child(1) {
+            position: absolute;
+            right: 0px;
+            bottom: -47px;
+        }
+        
+        .menu li .sub_menu li:nth-child(2) {
+            position: absolute;
+            right: 0px;
+            bottom: -94px;
+        }
+        
+        .menu li .sub_menu li:nth-child(3) {
+            position: absolute;
+            right: 0px;
+            bottom: -141px;
+        }
+        
+        .menu li .sub_menu {
+            display: none;
+        }
+        
+        .menu li:hover .sub_menu {
+            display: block;
+        }
+        
+        li a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .menu li:hover .sub_menu {
+            display: block;
+        }
+    </Style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <img src="../img/logo.jpg" alt="" srcset="">
+            <h1>FlowerBox 360</h1>
+            <p>...to get your daily dose of luxury roses!</p>
+            <form action="" method="post">
+                <input type="text" name="txtSerch" id="txtSerch" placeholder="here search">
+                <input type="button" value="Go">
+            </form>
+            <ul class="menu">
+                <li><a href="">ITEM 1</a></li>
+                <li><a href="">ITEM 2</a></li>
+                <li><a href="">ITEM 3</a></li>
+                <li><a href="">ITEM 4</a>
+                    <ul class="sub_menu">
+                        <li><a href="">Sub Item 4.1</a></li>
+                        <li><a href="">Sub Item 4.2</a></li>
+                        <li><a href="">Sub Item 4.3</a></li>
+                    </ul>
+                </li>
+                <li><a href="">ITEM 5</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <section>
+
+            </section>
+            <aside>
+
+            </aside>
+        </div>
+        <foot></foot>
+    </div>
+</body>
+
+</html>

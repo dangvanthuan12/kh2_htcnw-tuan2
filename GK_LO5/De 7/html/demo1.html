@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px auto;
+            box-sizing: border-box;
+        }
+        
+        .wrapper {
+            width: 960px;
+            background-color: antiquewhite;
+        }
+        
+        header {
+            position: relative;
+            height: 150px;
+        }
+        
+        .menu li {
+            position: absolute;
+            height: 45px;
+            width: 120px;
+            list-style: none;
+            background-color: aquamarine;
+            text-indent: 20px;
+            line-height: 45px;
+        }
+        
+        .menu li:nth-child(1) {
+            bottom: 0px;
+            left: 20px;
+        }
+        
+        .menu li:nth-child(2) {
+            bottom: 0px;
+            left: 150px;
+        }
+        
+        .menu li:nth-child(3) {
+            bottom: 0px;
+            left: 290px;
+        }
+        
+        .menu li:nth-child(4) {
+            bottom: 0px;
+            left: 440px;
+        }
+        
+        .menu li:nth-child(5) {
+            bottom: 0px;
+            left: 590px;
+        }
+        
+        li a {
+            text-decoration: none;
+            font-weight: bold;
+            color: blanchedalmond;
+        }
+        
+        .menu li:hover>a {
+            color: blue;
+        }
+        
+        .menu li:hover {
+            background-color: blueviolet;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <ul class="menu">
+                <li><a href=""> ITEM</a></li>
+                <li><a href=""> ITEM</a></li>
+                <li><a href=""> ITEM</a></li>
+                <li><a href=""> ITEM</a></li>
+                <li><a href=""> ITEM</a></li>
+            </ul>
+        </header>
+        <div class="content"></div>
+        <footer></footer>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/bootstrap.min.css">
+    <script src="../JS/jquery.min.js"></script>
+    <script src="../JS/bootstrap.min.js"></script>
+    <style>
+        [class*="col-"] {
+            padding: 0px;
+            margin: 0px auto;
+            box-sizing: border-box;
+        }
+        
+        .p1 {
+            color: azure;
+            position: absolute;
+            bottom: 10px;
+            font-size: 30px;
+            font-weight: bolder;
+            right: 30px;
+            text-shadow: 10px 10px 4px yellowgreen;
+        }
+        
+        li {
+            width: 130px;
+        }
+    </style>
+    <script>
+        $(document).ready(function() {
+            $("#myBtnOnline").click(function() {
+                $("#myModal").modal();
+            })
+        });
+
+        function ktMa() {
+            var mauKTMa = /^[0-9]{9}/
+            if (mauKTMa.test($("#txtMa").val()) == true) {
+                alert("Ok");
+            } else {
+                alert("false");
+            }
+        }
+
+        function ktHT() {
+            var mauHT = /(^[A-Z]{1}[a-z]+)(\s[A-Z]{1}[a-z]*)+$/;
+            if (mauHT.test($("#txtHT").val()) == true) {
+                alert("Ok");
+            } else {
+                alert("false");
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+    <div class="container bg-info">
+        <div class="row">
+            <div class="col-md-12">
+                <header>
+                    <img src="../Images/Banner.png" alt="" srcset="" width="100%">
+                    <p class="p1">TRƯỜNG ĐẠI HỌC CÔNG NGHIỆP THÀNH PHỐ HỒ CHÍ MINH</p>
+                </header>
+            </div>
+        </div>
+        <div class="row">
+            <nav>
+                <ul class="nav navbar-nav content-center bg-success">
+                    <li class="nav-item"><a class="nav-link" href="">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link" href="">CONTACT</a></li>
+                    <li class="nav-item"><a class="nav-link" href="">ABOUT</a>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">SERVICES<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#" id="myBtnOnline">Online</a></li>
+                                <li><a href="#" id="myBtnOff">Offline</a></li>
+                            </ul>
+                        </li>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="">HELP</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="row">
+            <table class="table-responsive table table-bordered table-hover">
+                <thead>
+                    <tr class="table-active">
+                        <th>STT</th>
+                        <th>HO TEN</th>
+                        <th>QUE QUAN</th>
+                        <th>LOP</th>
+                        <th>GHI CHU</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Trần Thanh Tuấn</td>
+                        <td>Cần Thơ</td>
+                        <td>DH17</td>
+                        <td>SV mới</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+
+                </tfoot>
+            </table>
+        </div>
+        <div class="row">
+            <div class="modal modal-fade" id="myModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&time;</button>
+                            <h4>THONG TIN SINH VIÊN</h4>
+                        </div>
+                        <div class="modal-body ">
+                            <form action="">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <label for="">Mã Sinh Viên:</label>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <input type="text" name="txtMa" id="txtMa" placeholder="Nhập mã sv" onblur="ktMa();">
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <label for="">Họ tên:</label>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <input type="text" name="txtHT" id="txtHT" placeholder="Họ tên" onblur="ktHT();">
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <label for="">Quê quán:</label>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <input type="text" name="txtQQ" id="txtQQ" placeholder="Quê quán">
+                                    </div>
+                                </div>
+                        </div>
+                        </form>
+                        <div class="modal-footer ">
+                            Chân modal
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

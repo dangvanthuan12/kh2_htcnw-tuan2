@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Lấy giá trị của checkbox bằng Javascript</h2>
+    <p>Hãy viết chương trình.</p>
+
+    <input type="checkbox" name="dichVu" value="5000" /> <label>Game</label> <br/>
+    <input type="checkbox" name="dichVu" value="10000" /> <label>Bơi</label> <br/>
+    <input type="checkbox" name="dichVu" value="2000" /> <label>Chạy</label> <br/>
+    <input type="checkbox" name="dichVu" value="1000" /> <label>Hat</label> <br/>
+    <br/> <br/>
+
+    <input type="button" id="btn" value="Xem kết quả" />
+
+    <!-- <script language="javascript">
+        document.getElementById('btn').onclick = function() {
+            // Khai báo tham số
+            var checkbox = document.getElementsByName('dichVu');
+            var result = "";
+
+            // Lặp qua từng checkbox để lấy giá trị
+            for (var i = 0; i < checkbox.length; i++) {
+                if (checkbox[i].checked === true) {
+                    result += ' [' + checkbox[i].value + ']';
+                }
+            }
+
+            // In ra kết quả
+            alert("Sở thích là: " + result);
+        };
+    </script> -->
+    <script language="javascript">
+        document.getElementById('btn').onclick = function() {
+            // Khai báo tham số
+            var checkbox = document.getElementsByName('dichVu');
+            var result = 0;
+
+            // Lặp qua từng checkbox để lấy giá trị
+            for (var i = 0; i < checkbox.length; i++) {
+                if (checkbox[i].checked === true) {
+                    result += parseFloat(checkbox[i].value);
+                }
+            }
+
+            // In ra kết quả
+            alert("Giá dịch vụ: " + result);
+        };
+    </script>
+</body>
+
+</html>

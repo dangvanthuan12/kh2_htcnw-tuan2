@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+<script src="../js/bootstrap.js"></script>
+<script src="../js/jquery-2.1.4.js"></script>
+<script src="../js/jquery.validate.js"></script>
+<style>
+.error{
+	color:red !important;
+}
+</style>
+<script>
+$(document).ready(function(e) {
+	jQuery.validator.addMethod("ten",function( value, element ) {
+			return this.optional( element ) || /^[A-Z\ ]+$/.test( value );
+		},"Phai nhap dung ten!");
+		
+    $("#fr").validate({
+		rules:{
+			txtMS:{
+				required:true,
+				digits:true,
+				rangelength:[8,8],
+				},
+			txtTen:{
+				required:true,
+				ten:true,
+				},
+			txtEmail:{
+				required:true,
+				email:true,
+				}		
+			},
+		messages:{
+			txtMS:{
+				required:"Phai nhap",
+				digits:"Ma so chi chua so!",
+				rangelength:"Ma co 8 so!",
+				},
+			txtTen:{
+				required:"Phai nhap!",
+				ten:"Phai nhap chu hoa va khoang trang!"
+				},
+			txtEmail:{
+				required:"Phai nhap!",
+				email:"Phai nhap dung kieu email!",
+				}	
+			}
+		});
+		var stt=1;
+		$("#fr").submit(function(e) {
+		   if($("#fr").valid())
+		   {		
+				var row="<tr><td>"+stt+"</td>";
+				row=row+"<td>"+$("#txtMS").val()+"</td>";
+				row=row+"<td>"+$("#txtTen").val()+"</td>";
+				row=row+"<td>"+$("#txtEmail").val()+"</td><tr>";
+				$("#tblSV").append(row);
+				stt++;
+				return false;		
+			}
+			return false;		
+        });
+});
+
+</script>
+</head>
+<body>
+<div class="container">
+<header class="page-header">
+<nav class="navbar navbar-default">
+<div class="navbar-header col-lg-4">
+	<a href="#"> <img src="../img/logo.PNG" width="206" height="96" alt=""/> </a>
+</div>
+<div class="navbar-header col-lg-7 text-center">
+<h2>BỘ CÔNG THƯƠNG TRƯỜNG ĐẠI HỌC CÔNG NGHIỆP TP. HỒ CHÍ MINH</h2>
+<h1 class="text-danger">KHOA CÔNG NGHỆ THÔNG TIN</h1>
+</div>
+</nav>
+<nav class="navbar bg-info">
+<ul class="nav navbar-nav navbar-right">
+  <li><a href="#">FIT</a></li>
+  <li><a href="#">Giảng viên</a></li>
+  <li><a href="#">Sinh viên</a></li>
+  <li><a href="#">Đoàn TN</a></li>
+</ul>
+</nav>
+</header>
+<div class="row">
+<section class="col-lg-7 col-md-7 modal-content">
+<h1 class="bg-success text-danger text-center">Tham gia mùa hè xanh</h1>
+<form id="fr" name="fr" class="form-horizontal">
+<div class="form-group">
+  <label for="txtMS" class="col-lg-3 col-md-3 text-right">MSSV*:</label>
+  <div class="col-lg-3 col-md-3"><input type="text" name="txtMS" id="txtMS" class="form-control"></div>
+</div>
+<div class="form-group">
+  <label for="txtTen" class="col-lg-3 col-md-3 text-right">Ten SV*:</label>
+ <div class="col-lg-7 col-md-7"><input type="text" name="txtTen" id="txtTen" class="form-control"></div>
+</div>
+<div class="form-group">
+  <label for="txtEmail" class="col-lg-3 col-md-3 text-right">Email*:</label>
+  <div class="col-lg-5 col-md-5"><input type="text" name="txtEmail" id="txtEmail" class="form-control"></div>
+</div>
+<div class="form-group text-center"> 
+  <input type="submit" value="Đăng ký" class="btn btn-success">
+  <input type="reset" value="Nhập lại" class="btn btn-warning">
+</div>
+</form>
+</section>
+<aside class="col-lg-5 col-md-5">
+<table class="table table-striped" id="tblSV">
+  <caption>
+    <h2 class="text-center">Kết quả đăng ký</h2>
+  </caption>
+  <tr>
+    <th scope="col">STT</th>
+    <th scope="col">Mã SV</th>
+    <th scope="col">Tên SV</th>
+    <th scope="col">Email</th>
+  </tr> 
+</table>
+</aside>
+</div>
+
+<footer class="modal-footer bg-primary">
+© 2017 Khoa Công nghệ thông tin - Trường Đại học Công nghiệp TP. Hồ Chí Minh
+</footer>
+</div>
+</body>
+</html>

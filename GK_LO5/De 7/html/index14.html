@@ -1,0 +1,326 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Untitled Document</title>
+    <link rel="stylesheet" type="text/css" href="../css/style14.css">
+    <style>
+        * {
+            margin: 0px;
+            box-sizing: border-box;
+            padding: 0px;
+        }
+        
+        body {
+            background-image: url(../img/background.jpg);
+        }
+        
+        #wrapper {
+            width: 960px;
+            margin: 0 auto;
+            border: 5px solid #CCCCCC;
+            background: linear-gradient(to right, #fae4cbec, white, #fae4cbec);
+        }
+        
+        .menu_ngang li {
+            width: 100%;
+            height: 70px;
+            list-style: none;
+            text-indent: 20px;
+            font-size: 25px;
+            font-weight: bold;
+            font-style: italic;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        
+        .menu_ngang li a {
+            font-size: 25px;
+            text-decoration: none;
+            color: coral;
+            font-weight: bold;
+            text-shadow: 5px 10px 5px violet;
+        }
+        
+        header p {
+            color: white;
+            font-style: italic;
+            font-weight: bold;
+            font-size: 30px;
+            position: absolute;
+            top: 50px;
+            text-align: center;
+            text-indent: 100px;
+            text-shadow: 3px 10px 3px rgb(245, 135, 186);
+        }
+        
+        span button {
+            border-radius: 20%;
+            background: gray;
+            color: white;
+            font-size: 14px;
+            padding: 2px;
+            font-weight: normal;
+        }
+        
+        span input {
+            border-radius: 10%;
+            background: white;
+            font-size: 14px;
+            padding: 2px;
+            font-weight: normal;
+        }
+        
+        header:hover>p {
+            transform: matrix3d(10px 12px 10px);
+        }
+        
+        .top-menu li {
+            height: 60px;
+            width: 160px;
+            border-top-left-radius: 20%;
+            border-top-right-radius: 20%;
+            margin-right: 10px;
+            float: left;
+            background-color: #f7e5f3;
+            position: absolute;
+            line-height: 60px;
+            text-indent: 20px;
+            list-style: none;
+        }
+        
+        li:hover>a {
+            color: rgb(163, 46, 56);
+        }
+        
+        .top-menu li a {
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .top-menu li:nth-child(1) {
+            top: 100px;
+            right: 1090px;
+        }
+        
+        .top-menu li:hover {
+            background-color: blueviolet;
+            transition-duration: 1s;
+        }
+        
+        .top-menu li:hover>a {
+            color: rgb(22, 172, 17);
+            transition-duration: 1s;
+        }
+        
+        .top-menu li:nth-child(2) {
+            top: 100px;
+            right: 920px;
+        }
+        
+        .top-menu li:nth-child(3) {
+            top: 100px;
+            right: 750px;
+        }
+        
+        .top-menu li:nth-child(4) {
+            top: 100px;
+            right: 580px;
+        }
+        
+        .top-menu li:nth-child(5) {
+            top: 100px;
+            right: 410px;
+        }
+        
+        #main section {
+            background: linear-gradient(to right, #fae4cbec, white, #fae4cbec);
+            width: 50%;
+            border-top: 5px solid #CCCCCC;
+            border-bottom: 5px solid #CCCCCC;
+        }
+        
+        #main aside {
+            width: 50%;
+            background: white;
+            text-align: center;
+            padding-top: 10px;
+            border-right: 5px solid #CCCCCC;
+            border-bottom: 5px solid #CCCCCC;
+            border-top: 5px solid #CCCCCC;
+            background: linear-gradient(to right, #fae4cbec, white, #fae4cbec);
+        }
+        
+        aside p {
+            text-align: justify;
+        }
+        
+        aside img {
+            width: 96%;
+            box-shadow: 3px 5px 6px gray;
+        }
+        
+        aside img:hover {
+            transform: rotate(10deg);
+            transition-duration: 3s;
+        }
+        
+        aside h1 {
+            color: #5b22c5;
+            text-align: center;
+            text-shadow: 3px 4px 5px orange;
+        }
+        
+        hr {
+            border: 2px dotted #990000;
+            margin: 10px auto
+        }
+        
+        footer {
+            width: 100%;
+            height: 80px;
+            margin-top: 2px;
+            background-color: #f7e5f3;
+            position: relative;
+        }
+        
+        footer p:first-child {
+            color: black;
+            font-size: 20px;
+            position: absolute;
+            top: 20px;
+            left: 30px;
+        }
+        
+        footer p:last-child {
+            color: black;
+            font-size: 20px;
+            position: absolute;
+            top: 20px;
+            right: 30px;
+        }
+        
+        .frm_left,
+        .frm_right {
+            float: left;
+            margin: 10px;
+        }
+        
+        .cen_frm {
+            display: flex;
+        }
+        
+        #main aside span input {
+            padding: 0.5px;
+            font-weight: bold;
+        }
+        
+        #main aside span {
+            font-weight: bold;
+        }
+        
+        #main section h1 {
+            text-shadow: 1px 10px 10px #0fb869;
+        }
+        
+        .clear {
+            clear: both;
+        }
+        
+        #wrapper .content1 {
+            width: 99%;
+            position: relative;
+        }
+        
+        #wrapper .content1 span {
+            position: absolute;
+            left: 650px;
+            top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <ul class="top-menu">
+            <li><a href="">HOME</a></li>
+            <li><a href="">SERVICE</a></li>
+            <li><a href="">CONTACT</a></li>
+            <li><a href="">INTRODUCE</a></li>
+            <li><a href="">FAVOURITE</a></li>
+        </ul>
+        <header>
+            <p>VIET NAM TOURISM IN 2022</p>
+            <img src="../img/Header.jpg" />
+            <nav>
+
+            </nav>
+
+        </header>
+        <div class="content1">
+            <h1>Tourism overview </h1>
+            <span>SEARCH:&nbsp;
+					<input type="text" size="18" placeholder="Search here..." />
+					<button>Go</button>	
+			</span>
+            <hr />
+            <P style="text-indent: 12px; padding: 1px; font-size: 16px;">Sun-kissed relaxation is an everyday thing in the bustling coastal town of <b>Nha Trang</b>. After all, this is a place with more days of sunshine per year than anywhere else in Vietnam. The town’s main beach, Tran Phu, a seven-kilometre stretch
+                of pristine sand and clear water, bordered by rustling palms, colourful beachside bars and seafood restaurants. Here are seven excellent reasons to put Nha Trang on your list.</P>
+            <hr />
+        </div>
+        <div class="clear"></div>
+
+        <div id="main">
+
+            <aside>
+                <h1>TRAVEL PICTURES</h1>
+                <hr />
+                <img src="../img/HOAT DONG DU LICH.jpg" style="border-radius: 5px;" />
+            </aside>
+            <section>
+                <h1 style="text-decoration: dotted;"> INTRODUCTION</h1>
+                <div id='div2'>
+                    <form action="http://dangkythanhvien.html" target="_blank" method="post">
+                        <fieldset>
+                            <legend>Registration information</legend>
+                            <div class="cen_frm">
+
+                                <div class="frm_left">
+                                    <label for="txtName">Full Name</label> <br><br>
+                                    <label for="txtEmail">Mailing Address</label> <br><br>
+                                    <label for="txtName">City</label> <br><br>
+                                    <label for="txtName">Country</label> <br><br>
+                                    <label for="txtArea">Questions</label>
+
+                                </div>
+                                <div class="frm_right">
+                                    <input type="text" id="txtName" placeholder="First Name"> <br>
+                                    <input type="text" id="txtEmail" placeholder="Mailing Address"> <br>
+                                    <select name="cars" id="cars">
+                                        <option value="TPHCM">TP.HCM</option>
+                                        <option value="">CAN THO</option>
+                                        <option value="opel">QUY NHON</option>
+                                        <option value="audi">NHA TRANG</option>
+                                    </select> <br>
+                                    <input type="text" id="txtName" placeholder="Country"> <br>
+                                    <textarea type="text" id="txtArea" placeholder="questions" cols="40" rows="5"></textarea> <br> <br>
+                                    <input type="submit" value="submit">
+                                    <input type="reset" value="reset">
+                                </div>
+
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </section>
+
+        </div>
+        <footer>
+            <p id="p1">Mã số sinh viên - Họ tên</p>
+            <p id="p2">Lớp - Khoa</p>
+        </footer>
+
+    </div>
+</body>
+
+</html>

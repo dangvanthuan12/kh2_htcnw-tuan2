@@ -1,0 +1,35 @@
+*{ margin: 0px auto; padding: 0px; }
+  .wrapper{ width: 960px;}
+
+ul { 
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 989px;
+    overflow: hidden;
+    background-color: #55FF88;
+}
+
+li a {
+      display: block;
+      color: white;
+      text-align: center;
+      text-decoration: none;
+	    padding: 14px 16px; /*tao khoi trong menu*/
+}
+li {
+    float: left;
+}
+.clear{ clear: both; }
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: #111;
+}
+.active {
+    background-color: #4CAF50;
+    color: white;
+}
+.contentL{ width: 30%; float: left;  overflow: hidden;}
+.contentC{ width: 40%; float: left; overflow: hidden; padding-left: 10px;}
+.aside{ width: 30%; float: right; overflow: hidden; padding-left: 10px;}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Menu</title>
+	<style>
+		*{margin: 0px; padding: 0px;}
+		body{font-family:Tahoma, Geneva, sans-serif; color:#C60;}
+		.menu ul{list-style-type: none; background: #39C; text-align: center;}
+		.menu ul li{ width: 200px; height: 40px; display: inline-table; line-height: 40px; position: relative;}
+		.menu ul li a{text-decoration: none; display: block; color:#f1f1f1;}
+		.menu ul li > .submenu{ display:none; position: absolute;}
+		.menu ul li a:hover{background: #f1f1f1; color: #333;}
+		.menu ul li:hover .submenu{display:block;}
+		.menu ul li:hover>.submenu{ display: block; }/* them dau > truc tiep tac dong len the .submenu se block*/
+ 
+        .menu>ul>li>.submenu:hover > .submenu{
+        top: 40px;
+        left: 130px;
+		
+    }
+	/*ul li a:hover {
+	background:# 0C3;
+	}*/
+	</style>
+
+<body>
+	<div class="menu">
+		<ul>
+			<li><a href="#">item1</a></li>
+			<li><a href="#">item2</a></li>
+			<li><a href="#">item3</a>
+				<ul class="submenu">
+					<li><a href="#">item3.1</a></li>
+					<li><a href="#">item3.2</a>
+						<ul class="submenu">
+								<li><a href="#">item3.2.2</a></li>
+								<li><a href="#">item3.2.2</a></li>
+						</ul>
+					</li>
+					<li><a href="#">item3.3</a></li>
+				</ul>
+			</li>
+			<li><a href="#">item4</a></li>
+			<li><a href="#">item5</a></li>
+		</ul>
+	</div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .active {
+            color: yellow;
+            border: 2px solid blue;
+            text-shadow: 1px 20px 10px violet;
+        }
+    </style>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#btnDM").dblclick(function() {
+                $('*').css("background-color", "red");
+            })
+            $('#btnAddClass').click(function() {
+                $('h1').addClass("active");
+            })
+            $('#btnRemoveClass').click(function() {
+                $('h1').removeClass("active");
+            })
+            $('#btnNameAndType').click(function() {
+                let t = $("#radThich").attr(type);
+
+            })
+
+        });
+    </script>
+</head>
+
+<body>
+    <div class="container" style="background-color: antiquewhite;">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>
+                    Tôi yêu Việt Nam
+                </h1>
+            </div>
+        </div>
+        <div class="row">
+            <input type="button" value="doimau" id="btnDM">
+            <input type="button" value="addClass" id="btnAddClass">
+            <input type="button" value="removeClass" id="btnRemoveClass">
+            <hr> <br>
+
+        </div>
+        <div class="row">
+            <h2>Bạn thích gì?</h2>
+            <input type="radio" name="radThich" id="radThich">
+            <strong>Bạn nghĩ gì?</strong> <br> <br>
+        </div>
+        <div class="row">
+
+            <input type="button" id="btnNameAndType" value="Xem Name và type">
+            <input type="button" id="btnDoiTypeTextBox" value="Đổi type thành textbox">
+            <input type="button" id="btnDoiTypeRad" value="Đổi type thành Radio">
+            <input type="button" id="chonCheckBox" value="Check box chọn hay không">
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,163 @@
+*{
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.web{
+    background: linear-gradient(to bottom,#6fc9ec,#5da5f1); 
+    margin: -8px;
+    min-height: 750px;
+}
+
+.header{
+    position: relative;
+    border-bottom: 7px dotted #fff;
+    display: flex;
+}
+
+.menu-parent {
+    position: absolute;
+    display: flex;
+    list-style: none;
+    font-size: 20px;
+    left: 10px;
+    top: 10px;
+}
+
+.menu-parent a {
+    color: white;
+    display: block;
+    text-decoration: none;
+    margin: 20px;
+}
+
+.menu-parent a:hover{
+    color: black;
+}
+
+.menu-child {
+    display: none;
+    list-style: none;
+}
+
+.menu-parent li:hover .menu-child {
+    display: block;
+    position: absolute;
+    margin-left: -40px;
+    margin-top: -20px;
+}  
+
+.text{
+    margin-top: 20px;
+    margin-right: 25px;
+}
+
+.text h1{
+    text-decoration: none;
+    font-size: 40px;
+    color: #ecfefd;
+    text-shadow: 0 0 13px blue , 0 1px 5px black;
+    font-weight: 700;
+}
+
+.container{
+    display: flex;
+    border-bottom: 7px dotted #fff;
+}
+
+.left{
+    display: block;
+    margin: 35px 90px 25px 35px;
+}
+
+.container__left-text{
+    display: block;
+}
+
+.left img{
+    width: 550px;
+}
+
+.left_row1{
+    margin: 35px 0 0 35px;
+    font-size: 35px;
+    font-weight: 600;
+    color: #f6fefc;
+    text-shadow: 2px 2px 1px #f6fefc;
+}
+
+.left_row2{
+    margin-top: 0;
+    margin: 15px 0 0px 40px;
+    font-size: 23px;
+    color: #c0dffd;
+}
+
+.right{
+    margin-top: 40px;
+    color: #fafdfe;
+}
+
+.right-row1{
+    font-size: 30px;
+    display: block;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.right-row2{
+    font-size: 14px;
+    font-weight: 540;
+}
+
+.right-form{
+    display: block;
+    font-size: 15px;
+    padding-right: 100px;
+    margin-left: 30px;
+}
+
+.right-form-row{
+    display: flex;
+    margin-top: 10px;
+}
+
+input{
+    width: 320px;
+    border-radius: 5px;
+}
+
+textarea{
+    border-radius: 5px;
+}
+
+.input_row2 {
+    margin-left: 73px;
+}
+
+.input_row3 {
+    margin-left: 50px;
+}
+
+.input_row4 {
+    margin-left: -46px;
+}
+
+.right-btn{
+    margin-top: 10px;
+    margin-left: 230px;
+}
+
+button{
+    background-color: #d9ddd9;
+    border-radius: 5px;
+    border: 1px dashed black;
+}
+
+.footer{
+    text-align: center;
+    color: #fafdfe;
+    padding: 50px 0;
+    font-size: 15px;
+}
+

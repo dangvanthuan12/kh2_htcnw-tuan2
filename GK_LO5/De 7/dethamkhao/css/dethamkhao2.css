@@ -1,0 +1,139 @@
+* {
+    margin: 0 auto;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.web {
+    background: linear-gradient(to bottom, #6fc9ec, #5da5f1);
+    margin: -8px;
+    min-height: 750px;
+}
+
+.header {
+    position: relative;
+    border-bottom: 7px solid #fff;
+    display: flex;
+    background-color: #009cd7;
+}
+
+.menu-parent {
+    position: relative;
+    display: flex;
+    list-style: none;
+    font-size: 20px;
+    left: 10px;
+    top: 8px;
+    background-color: #009cd7;
+}
+
+.menu-parent a {
+    color: white;
+    display: block;
+    text-decoration: none;
+    margin: 20px;
+}
+
+.menu-parent a:hover {
+    color: black;
+}
+
+.menu-child {
+    display: none;
+    list-style: none;
+    background-color: #009cd7;
+    position: absolute;
+}
+
+.menu-parent li:hover .menu-child {
+    display: block;
+    position: absolute;
+    margin-left: -40px;
+    margin-top: -20px;
+}
+
+.text {
+    margin-top: 20px;
+    margin-right: 25px;
+}
+
+.text h1 {
+    text-decoration: none;
+    font-size: 40px;
+    color: #ecfefd;
+    text-shadow: 0 0 13px blue, 0 1px 5px black;
+    font-weight: 700;
+}
+
+.center {
+    width: 100%;
+    position: relative;
+    display: flex;
+    color: white;
+}
+
+.left {
+    width: 50%;
+    margin: 20px;
+    float: left;
+    position: absolute;
+    display: block;
+}
+
+.cen_frm {
+    display: flex;
+}
+
+.frm_left,
+.frm_right {
+    float: left;
+    margin: 10px;
+}
+
+input,
+textarea {
+    border-radius: 5px;
+    margin-bottom: 14px;
+}
+
+input {
+    width: 320px;
+}
+
+button {
+    background-color: #d9ddd9;
+    border-radius: 5px;
+    border: 1px dashed black;
+}
+
+.right {
+    float: right;
+    position: absolute;
+    margin-left: 900px;
+    margin-top: 20px;
+}
+
+.right img {
+    margin: 20px;
+}
+
+.right h1 {
+    margin-left: 60px;
+    color: blue;
+    text-shadow: 3px 2px 0.5px blue;
+}
+
+.right h3 {
+    color: blue;
+    margin-left: 80px;
+}
+
+.footer {
+    clear: both;
+    text-align: center;
+    color: #fafdfe;
+    padding: 50px 0;
+    font-size: 15px;
+    border-top: 7px dotted #fff;
+    margin-top: -150px;
+}

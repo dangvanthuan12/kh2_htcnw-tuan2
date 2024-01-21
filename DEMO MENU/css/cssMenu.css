@@ -1,0 +1,41 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+	margin: 0px;
+	padding: 0px;
+	}
+.main{
+	margin: 0px auto;/*canh le auto đưa ra trung tâm của trang*/
+	width: 960px;
+	}
+.main ul{
+	margin: 0 px;/*Le cho menu*/
+	padding: 0px;
+	width: 250px;/*Kích thước chiều ngang menu*/
+	background:#99FF55;/*Màu nền cho menu */
+	float:left;
+	}
+.main ul li {
+	list-style:none;
+	position:relative;
+	}
+.main ul li a {
+	text-decoration:none;
+	color:#fff;
+	line-height:32px;
+	border-bottom: 1px solid #666;
+	display:block;
+	text-indent:10px;
+	}
+.main ul li ul {
+	position: absolute;
+	left:250px;
+	top:0px;
+	display:none;
+	}
+.main ul li:hover >ul {
+	display:block;
+	}
+.main ul li a:hover {
+	background:#990;
+	transition-delay: 30;}

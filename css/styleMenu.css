@@ -1,0 +1,39 @@
+@charset "utf-8";
+/* CSS Document */
+*{ padding:0px;
+	margin: 0px;}
+body{
+	font-family:Tahoma, Geneva, sans-serif;
+	color:#C60;
+}
+
+.menu ul{
+	list-style-type: none;
+	background:#39C;
+	text-align:center;
+	}
+.menu ul li{
+	display:inline-table;/* hiển thị dạng bảng khong ngat dong */
+	width: 200px; /*Do rộng cho thẻ li trong menu */
+	height: 40px;/*Chiều cao của thẻ li trong menu*/
+	line-height:40px; /*chiều cao của dòng trong menu*/
+	position:relative; /* giữ vị trí tuyet doi khi hiển thi trong thẻ */
+	}
+.menu ul li a{
+	text-decoration: none;
+	display: block;
+	color:#f1f1f1;
+	}
+.menu ul li a:hover{
+	background: #f1f1f1;
+	color: #333;
+	}
+/* xu ly menu con an khi chua hover*/
+.menu ul li > .sub-menu {
+	display:none;
+	position:absolute; /*giu vi trí tuong đối trong thẻ*/
+	}
+/* hien thi sub-menu khi hover */
+.menu ul li:hover .sub-menu{
+	display:block;
+	}

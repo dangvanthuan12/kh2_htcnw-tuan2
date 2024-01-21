@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery-3.6.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".chkTong").click(function() {
+                var tong = 0;
+                var n = $(".chkTong:checked").length;
+                if (n > 0) {
+                    $(".chkTong:checked").each(function() {
+                        tong += parseFloat($(this).val());
+                        $("#txtKQ").val(tong);
+                    });
+                }
+
+            });
+        })
+    </script>
+
+</head>
+
+<body>
+    <h1>checkbox </h1>
+    <form>
+        <p>
+            <input type="checkbox" name="chkTong" value="5000" class="chkTong"> <label for="">1. 5000</label>
+            <input type="checkbox" name="chkTong" value="6000" class="chkTong"><label for="">2. 6000</label>
+            <input type="checkbox" name="chkTong" value="7000" class="chkTong"><label for="">3. 7000</label>
+            <input type="checkbox" name="chkTong" value="8000" class="chkTong"> <label for="">4. 8000</label>
+            <input type="checkbox" name="chkTong" value="9000" class="chkTong"><label for="">5. 9000</label>
+        </p>
+        <input type="text" name="txtKQ" id="txtKQ" value="">
+    </form>
+    <div id="result"></div>
+    <button onclick="myFunction()">Click vào đây để xem kết quả</button>
+    <!-- <script>
+        function myFunction() {
+            var countChecked = function() {
+                var n = $("input:checked").length;
+                $("#result").text("có phần " + n + " tử được chọn");
+            };
+            countChecked();
+            $("input[type=checkbox]").on("click", countChecked);
+        }
+    </script>--->
+    <!--  <script>
+        function myFunction() {
+            var countChecked = function() {
+                var ketQua;
+                ketQua += parseFloat($('input:checked').val());
+                alert(ketQua);
+            };
+            countChecked();
+            $("input[type=checkbox]").on("click", countChecked);
+        }
+    </script> -->
+
+</body>
+
+</html>

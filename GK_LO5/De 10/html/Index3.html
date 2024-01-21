@@ -1,0 +1,322 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Untitled Document</title>
+    <style>
+        * {
+            margin: 0px auto;
+            padding: 0px;
+        }
+        
+        body {
+            background-image: url(../img/pattern.png);
+        }
+        
+        #wapper {
+            width: 960px;
+            margin: 0 auto;
+            padding: 5px;
+            background: #EBFAFE;
+        }
+        
+        nav {
+            width: 100%;
+            height: 55px;
+            background: #EDDEED;
+        }
+        
+        .menu li {
+            width: 140px;
+            list-style: none;
+            float: left;
+            line-height: 55px;
+            text-indent: 15px;
+            position: relative;
+        }
+        
+        a {
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        li:hover>a {
+            color: red;
+        }
+        
+        nav span {
+            font-size: 18px;
+            font-weight: bold;
+            color: red;
+            float: right;
+            padding: 15px;
+        }
+        
+        nav span input {
+            font-size: 14px;
+        }
+        
+        nav span button {
+            border-radius: 50%;
+            background: #0099FF;
+            color: white;
+            font-size: 14px;
+            padding: 3px;
+            font-weight: normal;
+        }
+        
+        .sub_menu {
+            display: none;
+            width: 140px;
+            background: #EDDEED;
+            position: absolute;
+            top: 55px;
+        }
+        
+        .menu li:hover {
+            background-color: rgb(89, 89, 89);
+        }
+        
+        .menu li:hover .sub_menu {
+            display: block;
+        }
+        
+        header {
+            width: 100%;
+        }
+        
+        header img {
+            width: 100%;
+        }
+        
+        #main {
+            width: 100%;
+            height: 480px;
+            margin: 2px auto;
+            display: flex;
+        }
+        
+        section {
+            background: linear-gradient(to right, #9DD7E1, white, #9DD7E1);
+            width: 70%;
+        }
+        
+        section #div1 {
+            float: left;
+            width: 49.5%;
+        }
+        
+        section #div2 {
+            float: right;
+            width: 49.5%;
+        }
+        
+        section h1 {
+            text-align: center;
+            color: #FF0000;
+            font-size: 30px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        
+        section p {
+            text-align: justify;
+            padding: 15px;
+            font-size: 18px;
+            font-family: Arial, Helvetica, sans-serif;
+            text-indent: 30px;
+        }
+        
+        section form {
+            width: 90%;
+            padding-left: 5%;
+        }
+        
+        fieldset {
+            font-size: 16px;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 3px 5px 6px gray;
+        }
+        
+        section input {
+            font-size: 12px;
+            padding: 1px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            box-shadow: 3px 5px 6px gray;
+        }
+        
+        center input {
+            margin: 25px;
+            font-size: 12px;
+            padding: 1px;
+            border-radius: 10px;
+            box-shadow: 3px 5px 6px gray;
+            font-weight: bold;
+        }
+        
+        aside {
+            width: 30%;
+            background: white;
+            text-align: center;
+            padding-top: 10px;
+            border: 5px solid #CCCCCC;
+        }
+        
+        aside img {
+            width: 96%;
+            box-shadow: 3px 5px 6px gray;
+        }
+        
+        aside img:hover {
+            transform: rotate(10deg);
+            transition-duration: 3s;
+        }
+        
+        aside h1 {
+            color: #FF0000;
+            text-align: center;
+            text-shadow: 3px 4px 5px orange;
+        }
+        
+        hr {
+            border: 1px dotted #990000;
+            margin: 10px auto
+        }
+        
+        footer {
+            width: 100%;
+            height: 80px;
+            margin-top: 2px;
+            background: #CCCC66;
+            position: relative;
+        }
+        
+        footer p:first-child {
+            color: black;
+            font-size: 20px;
+            position: absolute;
+            top: 20px;
+            left: 30px;
+        }
+        
+        footer p:last-child {
+            color: black;
+            font-size: 20px;
+            position: absolute;
+            top: 20px;
+            right: 30px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="wapper">
+        <header>
+            <div class="header1">
+                <article>Nha Trang </article>
+                <p>What you need to know before you go</p>
+            </div>
+
+            <img src="../img/banner.jpg" />
+
+        </header>
+        <nav>
+            <ul class='menu'>
+                <li><a href="">HOME</a></li>
+                <li><a href="">ABOUT US</a></li>
+                <li><a href="">PRODUCTS</a>
+                    <ul class='sub_menu'>
+                        <li><a href="">BUFET</a></li>
+                        <li><a href="">PICNIC</a></li>
+                        <li><a href="">VOUCHER</a></li>
+                    </ul>
+                </li>
+                <li><a style="color:#0000FF;" href="dangky.html">CONTACT</a></li>
+            </ul>
+            <span>SEARCH:&nbsp;
+					<input type="text" size="18" placeholder="Search here..." />
+					<button>Go</button>	
+					</span>
+        </nav>
+        <div id="main">
+            <aside>
+                <h1> View</h1>
+                <hr />
+                <img src="../img/aside1.jpg" />
+                <h1> Restaurant</h1>
+                <hr />
+                <img src="../img/aside2.jpg" />
+                <h1> Conference room</h1>
+                <hr />
+                <img src="../img/aside3.jpg" />
+            </aside>
+            <section>
+                <h4> Introduction - Contact</h4>
+
+                <div id='div2'>
+                    <form action="http://dangkythanhvien.html" target="_blank" method="post">
+                        <fieldset>
+                            <legend>Information</legend>
+                            <form name="form1" onSubmit="SubmitForm();" method="post" action="#">
+
+                                <div>
+                                    <label for="txtDN" class="title">Tên đăng nhập:</label>
+                                    <input id="txtDN" onBlur="return KiemTraTenDN();" type="text" name="txtdn" size="30" placeholder="txtDN" />
+                                </div>
+                                <div>
+                                    <label for="txtMK" class="title">Mật khẩu:</label>
+                                    <input id="txtMK" onBlur="return KiemTraPassWord();" type="password" name="txtMK" size="30" placeholder="txtMK" />
+                                </div>
+                                <div>
+                                    <label for="txtXNMK" class="title">Nhập lại mật khẩu:</label>
+                                    <input id="txtXNMK" onBlur="return KiemTraXacNhanPassword();" type="password" name="txtXNMK" size="30" placeholder="txtXNMK" /> </div>
+                                <div>
+                                    <label for="txtName" class="title">Họ và tên:</label>
+                                    <input type="text" id="txtName" name="txtName" size="30" placeholder="txtName" />
+                                </div>
+                                <div>
+                                    <label for="txtNS" class="title">Ngày sinh:</label>
+                                    <input type="date" id="txtNS" name="txtNS" size="30" placeholder="txtNS" onBlur="return KiemTraNgaySinh();" /></div>
+                                <div class="radio-buttons">
+                                    <span class="title">Giới tính:</span>
+                                    <input type="radio" name="gender" id="male" value="M" checked />
+                                    <label for="male">Nam</label>
+                                    <input type="radio" name="gender" id="female" value="F" />
+                                    <label for="female">Nữ</label><br />
+                                </div>
+                                <div>
+                                    <label for="txtDC" class="title">Địa chỉ:</label>
+                                    <input type="text" id="txtDC" name="txtDC" size="30" placeholder="txtDC" />
+                                </div>
+                                <div>
+                                    <label for="txtDT" class="title">Điện thoại:</label>
+                                    <input type="text" id="txtDT" name="txtDT" size="30" placeholder="txtDT" />
+                                </div>
+                                <div>
+                                    <label for="txtEmail" class="title">Email:</label>
+                                    <input type="email" id="txtEmail" name="txtEmail" size="30" placeholder="txtEmail" />
+                                </div>
+
+                                <center>
+                                    <div class="submit">
+                                        <input type="submit" value="Đăng ký" id="submit" />
+                                        <input type="reset" value="Hủy" id="submit" />
+                                    </div>
+                                </center>
+                        </fieldset>
+                        </form>
+                </div>
+            </section>
+        </div>
+        <footer>
+            <p id="p1">Lớp - Khoa</p>
+            <p id="p2">Mã số sinh viên - Họ tên</p>
+        </footer>
+    </div>
+</body>
+
+</html>

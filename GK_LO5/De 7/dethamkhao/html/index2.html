@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0 auto;
+            box-sizing: border-box;
+        }
+        
+        .wrapper {
+            width: 960px;
+            border: 1px solid rgb(6, 6, 14);
+            color: gray;
+        }
+        
+        header {
+            height: 100px;
+            background-color: #294e79;
+            position: relative;
+            color: white;
+        }
+        
+        header img {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+        
+        header h1 {
+            position: absolute;
+            top: 20px;
+            left: 80px;
+        }
+        
+        header p {
+            position: absolute;
+            top: 80px;
+            left: 80px;
+        }
+        
+        header form {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+        }
+        
+        .menu li {
+            color: white;
+            position: absolute;
+            height: 45px;
+            width: 110px;
+            bottom: 0px;
+            background-color: #5e748d;
+            list-style: none;
+            line-height: 45px;
+            text-indent: 20px;
+            border-radius: 5%;
+            border: 1px solid red;
+        }
+        
+        .menu li:hover {
+            background-color: blue;
+        }
+        
+        li a {
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        
+        .menu li:nth-child(5) {
+            right: 0px;
+        }
+        
+        .menu li:nth-child(4) {
+            right: 120px;
+        }
+        
+        .menu li:nth-child(3) {
+            right: 240px;
+        }
+        
+        .menu li:nth-child(2) {
+            right: 360px;
+        }
+        
+        .menu li:nth-child(1) {
+            right: 480px;
+        }
+        
+        .menu li .sub_menu li:nth-child(1) {
+            position: absolute;
+            right: 0px;
+            bottom: -47px;
+        }
+        
+        .menu li .sub_menu li:nth-child(2) {
+            position: absolute;
+            right: 0px;
+            bottom: -94px;
+        }
+        
+        .menu li .sub_menu li:nth-child(3) {
+            position: absolute;
+            right: 0px;
+            bottom: -141px;
+        }
+        
+        .menu li .sub_menu {
+            display: none;
+        }
+        
+        .menu li:hover .sub_menu {
+            display: block;
+            background-color: blue;
+        }
+        
+        .menu li .sub_menu li:hover:nth-child(1) {
+            display: block;
+            background-color: black;
+        }
+        
+        .menu li .sub_menu li:hover:nth-child(2) {
+            display: block;
+            background-color: black;
+        }
+        
+        .menu li .sub_menu li:hover:nth-child(3) {
+            display: block;
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <img src="../img/logo.jpg" alt="" srcset="">
+            <h1>
+                FlowerBox 360
+            </h1>
+            <p>
+                ...to get your daily dose of luxury roses!
+            </p>
+            <form action="" method="post">
+                <input type="text" name="txtS" id="txtSearch" placeholder="Here search">
+                <input type="button" value="Go">
+            </form>
+            <ul class="menu">
+                <li><a href="">ITEM 1</a></li>
+                <li><a href="">ITEM 2</a></li>
+                <li><a href="">ITEM 3</a></li>
+                <li><a href="">ITEM 4</a>
+                    <ul class="sub_menu">
+                        <li><a href="">sub_item 1</a></li>
+                        <li><a href="">sub_item 2</a></li>
+                        <li><a href="">sub_item 3</a></li>
+
+                    </ul>
+                </li>
+                <li><a href="">ITEM 5</a></li>
+            </ul>
+        </header>
+        <content>
+            <section>
+
+            </section>
+            <aside>
+
+            </aside>
+        </content>
+        <footer></footer>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,339 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Untitled Document</title>
+    <style>
+        * {
+            margin: 0px auto;
+            box-sizing: border-box;
+            padding: 0px;
+        }
+        
+        body {
+            background-image: url(../img/background.jpg);
+        }
+        
+        #wrapper {
+            width: 960px;
+            margin: 0 auto;
+            background-color: #89a969;
+            border: 5px solid #CCCCCC;
+        }
+        
+        header {
+            position: relative;
+        }
+        
+        .top-menu li {
+            height: 50px;
+            width: 160px;
+            border-top-left-radius: 20%;
+            border-top-right-radius: 20%;
+            margin-right: 10px;
+            background-color: #f7e5f3;
+            position: absolute;
+            line-height: 50px;
+            text-indent: 20px;
+            list-style: none;
+            bottom: 20px;
+        }
+        
+        li:hover>a {
+            color: rgb(163, 46, 56);
+        }
+        
+        .top-menu li a {
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .top-menu li:hover {
+            background-color: blueviolet;
+            transition-duration: 1s;
+        }
+        
+        .top-menu li:hover>a {
+            color: rgb(22, 172, 17);
+            transition-duration: 1s;
+        }
+        
+        .top-menu li:nth-child(1) {
+            left: 30px;
+        }
+        
+        .top-menu li:nth-child(2) {
+            left: 195px;
+        }
+        
+        .top-menu li:nth-child(3) {
+            left: 360px;
+        }
+        
+        .top-menu li:nth-child(4) {
+            left: 525px;
+        }
+        
+        .top-menu li:nth-child(5) {
+            top: 50px;
+            left: 800px;
+            transform: rotate(45deg);
+        }
+        
+        header p {
+            color: white;
+            font-style: italic;
+            font-weight: bold;
+            font-size: 30px;
+            position: absolute;
+            line-height: 150px;
+            text-align: center;
+            text-indent: 100px;
+            text-shadow: 3px 10px 3px yellow;
+        }
+        
+        span button {
+            border-radius: 50%;
+            background: #0099FF;
+            color: white;
+            font-size: 14px;
+            padding: 3px;
+            font-weight: normal;
+        }
+        
+        header:hover>p {
+            transform: matrix3d(10px 12px 10px);
+        }
+        
+        section {
+            background: linear-gradient(to right, #fae4cbec, white, #fae4cbec);
+            width: 70%;
+            border-top: 5px solid #CCCCCC;
+            border-bottom: 5px solid 5px solid;
+        }
+        
+        aside {
+            width: 30%;
+            background: white;
+            text-align: center;
+            padding-top: 10px;
+            border-right: 5px solid #CCCCCC;
+            border-bottom: 5px solid #CCCCCC;
+            border-top: 5px solid #CCCCCC;
+            background: linear-gradient(to right, #fae4cbec, white, #fae4cbec);
+        }
+        
+        aside p {
+            text-align: justify;
+        }
+        
+        aside img {
+            width: 96%;
+            box-shadow: 3px 5px 6px gray;
+        }
+        
+        aside img:hover {
+            transform: rotate(10deg);
+            transition-duration: 3s;
+        }
+        
+        aside h1 {
+            color: #5b22c5;
+            text-align: center;
+            text-shadow: 3px 4px 5px orange;
+        }
+        
+        hr {
+            border: 2px dotted #990000;
+            margin: 10px auto
+        }
+        
+        footer {
+            width: 100%;
+            height: 80px;
+            margin-top: 2px;
+            background-color: #f7e5f3;
+            position: relative;
+        }
+        
+        footer p:first-child {
+            color: black;
+            font-size: 20px;
+            position: absolute;
+            top: 20px;
+            left: 30px;
+        }
+        
+        footer p:last-child {
+            color: black;
+            font-size: 20px;
+            position: absolute;
+            top: 20px;
+            right: 30px;
+        }
+        
+        .frm_left,
+        .frm_right {
+            float: left;
+            margin: 10px;
+        }
+        
+        .cen_frm {
+            display: flex;
+        }
+        
+        .content aside span input {
+            padding: 0.5px;
+            font-weight: bold;
+        }
+        
+        .content aside span {
+            font-weight: bold;
+        }
+        
+        .content section h1 {
+            text-shadow: 1px 10px 10px #0fb869;
+        }
+        
+        .content {
+            width: 100%;
+            height: 480px;
+            margin: 2px auto;
+            display: flex;
+            border-bottom: 5px solid #CCCCCC;
+        }
+        
+        section h1 {
+            text-align: center;
+            color: #FF0000;
+            font-size: 30px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        
+        section p {
+            text-align: justify;
+            padding: 15px;
+            font-size: 18px;
+            font-family: Arial, Helvetica, sans-serif;
+            text-indent: 30px;
+        }
+        
+        section form {
+            width: 90%;
+            padding-left: 5%;
+        }
+        
+        fieldset {
+            font-size: 20px;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 3px 5px 6px gray;
+        }
+        
+        section input {
+            font-size: 16px;
+            padding: 5px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            box-shadow: 3px 5px 6px gray;
+        }
+        
+        section select {
+            font-size: 16px;
+            padding: 5px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            box-shadow: 3px 5px 6px gray;
+        }
+        
+        select option {
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+
+        <header>
+            <img src="../img/Amzone.PNG" width="100%" />
+            <ul class="top-menu">
+                <li><a href="">HOME</a></li>
+                <li><a href="">SERVICE</a></li>
+                <li><a href="">CONTACT</a></li>
+                <li><a href="">INTRODUCE</a></li>
+                <li><a href="">FAVOURITE</a></li>
+            </ul>
+        </header>
+
+        <div class="content">
+            <aside>
+                <span>SEARCH:&nbsp;
+					<input type="text" size="12" placeholder="Search here..." />
+					<button>Go</button>	
+				</span>
+                <h1>Make Money with Us</h1>
+                <hr />
+                <P style="text-indent:0px; padding: 1px;">
+                    <li>Sell products on Amazon</li>
+                    <li>Sell on Amazon Business</li>
+                    <li>Sell apps on Amazon</li>
+                    <li>Become an Affiliate</li>
+                    <li>Advertise Your Products</li>
+                    <li>Self-Publish with Us</li>
+                    <li>Host an Amazon Hub</li>
+                </P>
+                <h1> View</h1>
+                <hr />
+                <img src="../img/Aside.PNG" />
+                <hr />
+            </aside>
+            <section>
+                <h1 style="text-decoration: dotted;"> INTRODUCTION</h1>
+                <div id='div2'>
+                    <form action="http://dangkythanhvien.html" target="_blank" method="post">
+                        <fieldset>
+                            <legend>Registration information</legend>
+                            <div class="cen_frm">
+
+                                <div class="frm_left">
+                                    <label for="txtName">Full Name</label> <br><br>
+                                    <label for="txtEmail">Mailing Address</label> <br><br>
+                                    <label for="txtName">City</label> <br><br>
+                                    <label for="txtName">Country</label> <br><br>
+                                    <label for="txtArea">Questions</label>
+
+                                </div>
+                                <div class="frm_right">
+                                    <input type="text" id="txtName" placeholder="First Name"> <br>
+                                    <input type="text" id="txtEmail" placeholder="Mailing Address"> <br>
+                                    <select name="cars" id="cars">
+                                        <option value="TPHCM">TP.HCM</option>
+                                        <option value="">CAN THO</option>
+                                        <option value="opel">QUY NHON</option>
+                                        <option value="audi">NHA TRANG</option>
+                                    </select> <br>
+                                    <input type="text" id="txtName" placeholder="Country"> <br>
+                                    <textarea type="text" id="txtArea" placeholder="questions" cols="40" rows="5"></textarea> <br> <br>
+                                    <input type="submit" value="submit">
+                                    <input type="reset" value="reset">
+                                </div>
+
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </section>
+
+        </div>
+        <footer>
+            <p id="p1">Mã số sinh viên - Họ tên</p>
+            <p id="p2">Lớp - Khoa</p>
+        </footer>
+
+    </div>
+</body>
+
+</html>

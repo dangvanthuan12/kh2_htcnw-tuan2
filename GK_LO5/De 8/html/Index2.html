@@ -1,0 +1,378 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Untitled Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        body {
+            background-image: url(../img/background.jpg);
+        }
+        
+        #wapper {
+            width: 960px;
+            margin: 0 auto;
+            background-color: #d9edf7;
+        }
+        
+        .menu_ngang li {
+            width: 100%;
+            height: 70px;
+            list-style: none;
+            text-indent: 20px;
+            font-size: 25px;
+            font-weight: bold;
+            font-style: italic;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        
+        .menu_ngang li a {
+            font-size: 25px;
+            text-decoration: none;
+            color: coral;
+            font-weight: bold;
+            text-shadow: 5px 10px 5px violet;
+        }
+        
+        header p {
+            color: rgb(231, 216, 76);
+            font-style: italic;
+            font-weight: bold;
+            font-size: 30px;
+            position: absolute;
+            line-height: 150px;
+            text-align: center;
+            text-indent: 100px;
+        }
+        
+        span button {
+            border-radius: 50%;
+            background: #0099FF;
+            color: white;
+            font-size: 14px;
+            padding: 3px;
+            font-weight: normal;
+        }
+        
+        header:hover>p {
+            transform: matrix3d(10px 12px 10px);
+        }
+        
+        .top-menu li {
+            height: 60px;
+            width: 160px;
+            border-top-left-radius: 20%;
+            border-top-right-radius: 20%;
+            margin-right: 10px;
+            float: left;
+            background-color: white;
+            position: absolute;
+            top: 100px;
+            line-height: 60px;
+            text-indent: 20px;
+            list-style: none;
+        }
+        
+        .top-menu li:hover {
+            background-color: blueviolet;
+        }
+        
+        li:hover>a {
+            color: yellow;
+        }
+        
+        .top-menu li a {
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .top-menu li:nth-child(1) {
+            top: 110px;
+            right: 1090px;
+        }
+        
+        .top-menu li:nth-child(2) {
+            top: 110px;
+            right: 920px;
+        }
+        
+        .top-menu li:nth-child(3) {
+            top: 110px;
+            right: 750px;
+        }
+        
+        .top-menu li:nth-child(4) {
+            top: 110px;
+            right: 580px;
+        }
+        
+        .top-menu li:nth-child(5) {
+            top: 110px;
+            right: 410px;
+        }
+        
+        section {
+            background: linear-gradient(to right, #fae4cbec, white, #fae4cbec);
+            width: 70%;
+        }
+        
+        aside {
+            width: 30%;
+            background: white;
+            padding-top: 10px;
+            border: 5px solid #CCCCCC;
+            background: linear-gradient(to right, #fae4cbec, white, #fae4cbec);
+        }
+        
+        aside img {
+            width: 96%;
+            box-shadow: 3px 5px 6px gray;
+        }
+        
+        aside img:hover {
+            transform: rotate(10deg);
+            transition-duration: 3s;
+        }
+        
+        aside h1 {
+            color: #7c2185;
+            text-align: center;
+            text-shadow: 3px 4px 5px orange;
+        }
+        
+        hr {
+            border: 1px dotted #990000;
+            margin: 10px auto
+        }
+        
+        .div1 aside {
+            width: 30%;
+            background: white;
+            text-align: center;
+            padding-top: 10px;
+            border: 5px solid #CCCCCC;
+            font-size: 18px;
+        }
+        
+        footer {
+            width: 100%;
+            height: 80px;
+            margin-top: 2px;
+            background: #f3aee4;
+            position: relative;
+        }
+        
+        footer p:first-child {
+            color: black;
+            font-size: 20px;
+            position: absolute;
+            top: 20px;
+            left: 30px;
+        }
+        
+        footer p:last-child {
+            color: black;
+            font-size: 20px;
+            position: absolute;
+            top: 20px;
+            right: 30px;
+        }
+        
+        header {
+            width: 100%;
+        }
+        
+        header img {
+            width: 100%;
+        }
+        
+        #main {
+            width: 100%;
+            height: 480px;
+            margin: 2px auto;
+            display: flex;
+        }
+        
+        section {
+            background: linear-gradient(to right, #9DD7E1, white, #9DD7E1);
+            width: 70%;
+        }
+        
+        section #div1 {
+            float: left;
+            width: 49.5%;
+        }
+        
+        section #div2 {
+            float: right;
+            width: 49.5%;
+        }
+        
+        section h1 {
+            text-align: center;
+            color: #FF0000;
+            font-size: 30px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        
+        section p {
+            text-align: justify;
+            padding: 15px;
+            font-size: 18px;
+            font-family: Arial, Helvetica, sans-serif;
+            text-indent: 30px;
+        }
+        
+        section form {
+            width: 90%;
+            padding-left: 5%;
+        }
+        
+        fieldset {
+            font-size: 25px;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 3px 5px 6px gray;
+        }
+        
+        section input {
+            font-size: 16px;
+            padding: 5px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            box-shadow: 3px 5px 6px gray;
+        }
+        
+        aside {
+            width: 30%;
+            background: white;
+            text-align: center;
+            padding-top: 10px;
+            border: 5px solid #CCCCCC;
+        }
+        
+        aside img {
+            width: 96%;
+            box-shadow: 3px 5px 6px gray;
+        }
+        
+        aside img:hover {
+            transform: rotate(10deg);
+            transition-duration: 3s;
+        }
+        
+        aside h1 {
+            color: #FF0000;
+            text-align: center;
+            text-shadow: 3px 4px 5px orange;
+        }
+        
+        hr {
+            border: 1px dotted #990000;
+            margin: 10px auto
+        }
+        
+        footer {
+            width: 100%;
+            height: 80px;
+            margin-top: 2px;
+            background: #CCCC66;
+            position: relative;
+        }
+        
+        footer p:first-child {
+            color: black;
+            font-size: 20px;
+            position: absolute;
+            top: 20px;
+            left: 30px;
+        }
+        
+        footer p:last-child {
+            color: black;
+            font-size: 20px;
+            position: absolute;
+            top: 20px;
+            right: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wapper">
+        <ul class="top-menu">
+            <li><a href="">DU LỊCH</a></li>
+            <li><a href="">DỊCH VỤ</a></li>
+            <li><a href="">LIÊN HỆ</a></li>
+            <li><a href="">GIỚI THIỆU</a></li>
+            <li><a href="">HỖ TRỢ</a></li>
+        </ul>
+
+        <header>
+            <p>Nha Trang Ancient Town - The most beautiful ancient city in Asia</p>
+            <img src="../img/Header.jpg" />
+            <nav>
+
+            </nav>
+
+        </header>
+
+        <div id="main">
+            <section>
+                <h1 style="text-decoration: dotted;"> INTRODUCTION</h1>
+                <div id='div1'>
+                    <aside style="font-size: 18px; width: 300px;">
+                        <h2>TIN NỔI BẬT</h2>
+                        <article style="font-size:18px; text-align: justify;">
+                            Xét báo cáo của Bộ Y tế về tình hình và kết quả công tác phòng, chống dịch Covid-19, Thủ tướng Phạm Minh Chính yêu cầu Bộ Y tế chỉ đạo việc nghiên cứu tiêm vaccine phòng Covid-19 mũi 4 cho người lớn, mũi 3 cho trẻ em và tiêm cho trẻ em từ 3 đến 5 tuổi;
+                            có kế hoạch mua và thúc đẩy sản xuất vaccine trong nước, bảo đảm khoa học, an toàn và hiệu quả. Theo nghị quyết về Chương trình phòng, chống dịch Covid-19, mục tiêu đến hết quý I/2022 hoàn thành việc tiêm mũi 2 cho người dân
+                            từ 12 tuổi đến dưới 18 tuổi, tiêm mũi 3 cho người từ 18 tuổi trở lên đến lịch tiêm chủng, trừ các đối tượng chống chỉ định tiêm; bảo đảm đủ vaccine.
+                        </article>
+                    </aside>
+                </div>
+                <div id='div2'>
+                    <form action="http://dangkythanhvien.html" target="_blank" method="post">
+                        <fieldset>
+                            <legend>Thông tin đăng kí</legend>
+                            Họ tên: <input type="text" placeholder="Tên của bạn" size="25" required />
+                            <br />Email: <input type="email" placeholder="Email của bạn" size="25" required>
+                            <br /> Số điện thoại: <input type="number" placeholder=" Your Phone number" size="25" required><br /> Giới tính:
+                            <br /> Nam: <input type="radio" name="sex" value="Male" checked size="60" /> Nữ: <input type="radio" name="sex" value="Female" />
+                            <br />
+                            <center>
+                                <input type="submit" value="Submit" />
+                                <input type="reset" value="Reset" />
+                            </center>
+                        </fieldset>
+                    </form>
+                </div>
+                <aside>
+                    <span>SEARCH:&nbsp;
+					<input type="text" size="18" placeholder="Search here..." />
+					<button>Go</button>	
+				</span>
+                    <h1> View</h1>
+                    <hr />
+                    <img src="../img/aside1.jpg" />
+                    <h1> Restaurant</h1>
+                    <hr />
+                    <img src="../img/aside2.jpg" />
+                </aside>
+        </div>
+        </section>
+
+        <footer>
+            <p id="p1">Mã số sinh viên - Họ tên</p>
+            <p id="p2">Lớp - Khoa</p>
+        </footer>
+
+    </div>
+</body>
+
+</html>

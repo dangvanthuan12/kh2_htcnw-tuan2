@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery-3.6.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <style>
+        .nopaddingPanel {
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="col-md-8 col-md-offset-2">
+        <form role="form">
+            <!--<div class="form-group">-->
+            <div class="col-md-3 nopaddingPanel">
+                <label>Search Server</label>
+            </div>
+            <div class="col-md-6 nopaddingPanel">
+                <!-- <form name="searchForm" class="form" ng-submit="submit()"> -->
+                <div ng-class="{ 'has-error': searchForm.searchName.$invalid || searchForm.searchId.$invalid }">
+                    <input name="searchName" class="form-control" ng-model="vm.search" type="text" id="searchName" placeholder="Search" required>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <button type="submit" class="btn btn-success" ng-click="searchServerFile()">Search</button>
+            </div>
+            <!-- </form> -->
+            <!--</div>-->
+        </form>
+    </div>
+
+</body>
+
+</html>

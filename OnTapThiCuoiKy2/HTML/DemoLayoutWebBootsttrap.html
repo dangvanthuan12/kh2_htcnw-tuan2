@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../CSS/bootstrap.min.css">
+    <script src="../JS/jquery.min.js"></script>
+    <script src="../JS/bootstrap.min.js"></script>
+    <script src="../JS/BaiCK.js"></script>
+    <div class="row">
+        <style>
+            [class*="col-"] {
+                margin: 0px;
+                padding: 0px;
+                box-sizing: border-box;
+            }
+        </style>
+</head>
+
+<body>
+    <div class="container-fluid" style="background-color:yellow;">
+        <div class="row">
+            <div class="col-md-12 col-xl-12 col-sm-12">
+                <header>
+                    <img src="../Images/Banner.png" width="100%">
+                </header>
+            </div>
+        </div>
+        <nav class="navbar-collapse">
+            <ul class="navbar-nav nav">
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">SHOP</a></li>
+                <li><a href="#">BLOG</a></li>
+                <li><a href="#">ARTICLE</a></li>
+                <li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown" href="#">SERVICES<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#" id="myBtn">Online</a></li>
+                        <li><a href="#" id="myBtn1">OFFLINE</a></li>
+                        <li><a href="#" id="myBtn2">HOME1</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <section class="col-md-3">
+                <img src="../Images/left.png" width="100%">
+            </section>
+            <aside class="col-md-9" class="table-responsive">
+                <h2 class="text-danger" style="text-align:center">Customer Ordered List</h2>
+                <table class="table table-bordered table-hover">
+                    <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Address</th>
+                        <th>Delivery </th>
+                        <th>Email</th>
+                        <th>Telephone number</th>
+
+                    </tr>
+                </table>
+            </aside>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <footer class="modal-footer bg-success">
+                <p class="text-danger text-left">@ 2019 - SE FIT.All Rights Reserved</p>
+            </footer>
+        </div>
+    </div>
+
+
+    </div>
+    <div class="modal fade" role="dialog" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h2 class="text-danger">Customer infomation</h2>
+
+                </div>
+
+                <div class="modal-body">
+                    <form role="form-control" class="form-horizontal">
+                        <div id="thongbao" class="text-danger"></div>
+
+                        <form class="form-group">
+                            <label for="txtTen" class="control-label col-xs-3">Customer Name</label>
+                            <div class="col-md-12">
+                                <input type="txtTen" class="form-control" id="txtTen">
+                                <span id="tbTen" class="text-danger">*</span>
+                            </div>
+                        </form>
+
+                        <form class="form-group">
+                            <label for="txtDC" class="control-label col-xs-3">Address</label>
+                            <div class="col-md-12">
+                                <input type="txtDC" class="form-control" id="txtDC">
+                                <span id="tbDC" class="text-danger">*</span>
+                            </div>
+                        </form>
+
+                        <form class="form-group">
+                            <label for="txtNgay" class="control-label col-xs-3">Delivery Date</label>
+                            <div class="col-md-12">
+                                <input type="date" class="form-control" id="txtNgay">
+                                <span id="tbNgay" class="text-danger">*</span>
+                            </div>
+                        </form>
+
+                        <form class="form-group">
+                            <label for="txtMail" class="control-label col-xs-3">Email</label>
+                            <div class="col-md-12">
+                                <input type="txtMail" class="form-control" id="txtMail">
+                                <span id="tbMail" class="text-danger">*</span>
+                            </div>
+                        </form>
+
+                        <form class="form-group">
+                            <label for="txtSDT" class="control-label col-xs-6">Telephone number</label>
+                            <div class="col-md-12">
+                                <input type="txtSDT" class="form-control" id="txtSDT">
+                                <span id="tbSDT" class="text-danger">*</span>
+                            </div>
+                        </form>
+
+                        <button type="button" class="btn btn-block btn-danger" id="btnSave">Save</button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

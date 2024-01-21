@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery-3.6.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <style>
+        [class*="col-"] {
+            padding: 0px;
+        }
+        
+        li {
+            width: 150px;
+        }
+    </style>
+    <script>
+        $(document).ready(function() {
+            $('#btnLH').click(function() {
+                $('#myModal').modal();
+            })
+
+            function kiemTraMa() {
+                var mauKT = /[0-9]{9}$/;
+                if (mauKT.test($("#txtMa").val()) == true) {
+                    alert("Bạn nhập đúng");
+                } else {
+                    alert("Bạn nhập sai");
+                }
+            }
+            $("#txtMa").blur(kiemTraMa);
+        })
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row col-12 col-sm-12 col-md-12">
+            <img src="../img/banner.png" alt="" srcset="" width="100%">
+        </div>
+        <div class="row col-12 col-sm-12 col-md-12">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="#">Tên thương hiệu</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active btn-info">
+                            <a class="nav-link" href="#">Trang chủ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Giới thiệu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Sản phẩm</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" id="btnLH">Liên hệ</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="row col-12 col-sm-12 col-md-12">
+            <table class="table table-bordered table table-hover">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Language</th>
+                        <th>Percent</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Java</td>
+                        <td>14.21%</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>C</td>
+                        <td>11.03%</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>C++</td>
+                        <td>5.60%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="row col-sm-12 col-md-12">
+            <div class="modal fade col-12 col-sm-12 col-md-12" role="dialog" id="myModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            DANG THONG TIN DICH VU
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="row">
+                                    <div class="col-6 col-sm-3">
+                                        <label for="">Mã Khách hàng:</label>
+
+                                    </div>
+                                    <div class="col-6 col-sm-9">
+                                        <input type="text" class="form-control" placeholder="Nhập mã khách hàng" id="txtMa">
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-6 col-sm-3">
+                                        <label for="">Họ tên:</label>
+
+                                    </div>
+                                    <div class="col-6 col-sm-9">
+                                        <input type="text" id="txtTen" class="form-control" placeholder="Nhập họ tên">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6 col-sm-9">
+                                        <span id="tbTen">*</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6 col-sm-3">
+                                        <label for="">Địa chỉ:</label>
+
+                                    </div>
+                                    <div class="col-6 col-sm-9">
+                                        <input type="text" class="form-control" placeholder=".col-4 .col-sm-8">
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-6 col-sm-3">
+                                        <label for="">Dịch vụ:</label>
+
+                                    </div>
+                                    <div class="col-6 col-sm-9">
+                                        <select name="gia" class="form-control" id="slGia">
+                                            <option value="2000">Boi</option>
+                                            <option value="3000">Game</option>
+                                            <option value="5000">Nuoc</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-6 col-sm-3">
+                                        <label for="">Giá:</label>
+
+                                    </div>
+                                    <div class="col-6 col-sm-9">
+                                        <input type="text" name="txtGiaDV" id="txtGiaDV" class="form-control">
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-4 col-xl-4">
+                                        <label for="">Đồ dùng:</label>
+
+                                    </div>
+                                    <div class="col-8 col-xl-8">
+                                        <input type="checkbox" id="checkbox1" /> Áo quần bơi
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-4 col-xl-4">
+                                        <label for=""></label>
+                                    </div>
+                                    <div class="col-8 col-xl-8">
+                                        <input type="checkbox" id="checkbox2" /> Phao
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-4 col-xl-4">
+                                        <label for=""></label>
+                                    </div>
+                                    <div class="col-8 col-xl-8">
+                                        <input type="checkbox" id="checkbox3" /> Kính bơi
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-4 col-xl-4">
+                                        <label for=""></label>
+                                    </div>
+                                    <div class="col-8 col-xl-8">
+                                        <input type="button" value="Tạm tính" id="btnTT">
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-4 col-xl-4">
+                                        <label for="">Thành tiền:</label>
+                                    </div>
+                                    <div class="col-8 col-xl-8">
+                                        <input type="text" name="txtKQ" id="txtKQ" class="form-control">
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-4 col-xl-4">
+                                        <label for="">Giảm trừ:</label>
+                                    </div>
+                                    <div class="col-8 col-xl-8">
+                                        <input type="radio" name="giam" value="7000" checked> Ngày thường
+                                        <input type="radio" name="giam" value="1000"> Cuối tuần
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-4 col-xl-4">
+                                        <label for="">Tổng tiền:</label>
+                                    </div>
+                                    <div class="col-8 col-xl-8">
+                                        <input type="text" name="txtKQ" id="txtKQ" class="form-control">
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-5 col-xl-5">
+                                    </div>
+                                    <div class="col-5 col-xl-5">
+                                        <input type="submit" value="Submit">&nbsp;
+                                        <input type="reset" value="reset">
+                                    </div>
+                                    <div class="col-2 col-xl-2">
+                                    </div>
+                                </div>
+                                <br>
+
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            Chan
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Regular Expression</title>
+
+    <script>
+        function kiemtra() {
+
+            var ch;
+            ch = document.getElementById("txtChuoi").value;
+
+            //ten phai nhap chuoi va bat dau  la ky tu
+            var pten = /^[a-z]/i;
+
+            //kiểm tra so dien thoai các chữ số ta dùng [0-9] tuong duong \d và chiều dài 10 hay 11 ký tự nên ta dùng {10|11}, bắt dau la chu so va ket thuc la chu so
+            var psodt = /^(090)\d{7}$/;
+
+            //kiem tra so tai khoan theo cau truc xxxx-xxxx-xxxx-xxxx
+            var psotk = /^[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}$/;
+            // 	p3 có the thay bieu thuc /^\d{4}-\d{4}-\d{4}-\d{4}$/; 
+
+
+            
+            //kiem tra tinh hop le cua dia chi email abc123as@yahoo.com.vn
+            var pemail = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+
+            if (pmk.test(ch))
+                alert("Chuoi ban vua nhap hop le");
+            else {
+                alert("Chuoi sai roi ....");
+                document.getElementById("txtChuoi").value = "";
+                document.getElementById("txtChuoi").focus();
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <form id="frm" name="frm" method="post" action="">
+        <p>
+            <label>
+      <input type="text" name="txtChuoi" id="txtChuoi" />
+    </label>
+        </p>
+        <p>
+            <label>
+      <input type="button" name="btnClick" id="btnClick" value="Test Regular Expression" onclick="kiemtra()" />
+    </label>
+        </p>
+    </form>
+</body>
+
+</html>
